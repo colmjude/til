@@ -2,11 +2,13 @@
 
 import os
 import jinja2
+from config import Config
 
 from note import Note
 from helpers import file_mod_timestamp, timestamp_datetime
 
-dist_dir = "dist/notes/"
+
+config = Config()
 
 
 def file_slug(filename: str):
@@ -16,7 +18,7 @@ def file_slug(filename: str):
 def collect_notes():
     dnames = []
     fnames = []
-    for root, dir_names, file_names in os.walk('docs'):
+    for root, dir_names, file_names in os.walk(config.NOTES_ROOT):
         for d in dir_names:
             dnames.append(os.path.join(root, d))
         for f in file_names:
@@ -42,7 +44,7 @@ dirs, files = collect_notes()
 
 for f in files:
     note = Note(f)
-    f = f.replace("docs/", dist_dir)
+    f = f.replace(config.NOTES_ROOT, config.DIST_ROOT)
     f = f.replace(".md", "")
     render(f + ".html", note_template, markdown_output=note.get_html())
     print(f"Created {f}")
