@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="{{ htmlLang | default('en') }}">
+<head>
+  <meta charset="utf-8">
+
+  <title>{% block pageTitle %}Welcome to Colmjude.com{% endblock %}</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Search Engine -->
+  <meta name="description" content="An about page for Colm Britton, designer, technologist and web tinkerer.">
+  <meta name="author" content="Colm Britton">
+
+  
+<link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto:300,400,700" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="/static/stylesheets/homepage1.css">
+
+  <meta name="theme-color" content="#d95a45">
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@colmbritton" />
+<meta name="twitter:title" content="Colmjude.com about" />
+<meta name="twitter:description" content="The about page for Colm Britton's home on the web." />
+<meta name="twitter:image" content="https://colmjude.com/test/static/images/twitter-home-card.png" />
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+
+  <script src="/static/javascripts/vendor/modernizr.js"></script>
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+</head>
+
+<body class="{% block htmlClasses %}{% endblock htmlClasses %} ">
+  <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+{% block cjHeader %}
+<header class="top-bar">
+
+	<div class="top-bar__details">
+		<a class="top-bar__details__link" href="/">
+			<svg version="1.1" id="Layer_1" class="logo-sqr" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 120 120" xml:space="preserve">
+			<style type="text/css">
+				.st0{fill:#D95A45;}
+				.st1{fill:#1C2D43;}
+			</style>
+			<g>
+				<rect class="st0" width="120" height="120"/>
+				<rect y="80" class="st1" width="120" height="40"/>
+				<rect y="60" class="st1" width="60" height="10"/>
+				<rect x="75" y="90" class="st0" width="45" height="10"/>
+			</g>
+			</svg>
+			<h2 class="top-bar__name">Colmjude</h2>
+		</a>
+	</div>
+
+
+	<nav>
+		<input type="checkbox" id="tm" class="top-bar__menu-toggle">
+		<label for="tm" class="tm">Menu</label>
+		<ul class="top-bar__menu">
+			<li class="top-bar__menu__item">
+				<a class="top-bar__menu__item__link" href="/"><span>Home</span></a>
+			</li>
+			<li class="top-bar__menu__item">
+				<a class="top-bar__menu__item__link" href="/blog"><span>Blog</span></a>
+			</li>
+			<li class="top-bar__menu__item">
+				<a class="top-bar__menu__item__link top-bar__menu__item__link--active" href="/about"><span>About</span></a>
+			</li>
+		</ul>
+	</nav>
+</header>
+{% endblock %}
+
+{% block heroBanner %}
+<div class="hero-title">
+	<h1 class="cj-heading-xl">Notes</h1>
+</div>
+{% endblock %}
+
+<main id="content">
+    {% block content %}{% endblock %}
+</main>
+
+{% block cjFooter %}
+<footer class="footer">
+	<div class="footer__content">
+		<p>&copy; 2019 | made by <a href="https://twitter.com/colmbritton">@colmbritton</a></p>
+	</div>
+</footer>
+{% endblock %}
+
+{% block bodyEnd %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js"></script>
+{% endblock %}
+
+</body>
+</html>
