@@ -46,5 +46,5 @@ for f in files:
     note = Note(f)
     f = f.replace(config.NOTES_ROOT, config.DIST_ROOT)
     f = f.replace(".md", "")
-    render(f + ".html", note_template, markdown_output=note.get_html())
+    render(f + ".html", note_template, markdown_output=note.get_html(), frontmatter=note.get_frontmatter())
     print(f"Created {f}")

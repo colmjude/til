@@ -1,5 +1,8 @@
 {% extends "base.html" %}
 
 {%- block content %}
-{{ markdown_output }}
+<div class="markdown-output">
+    <h2 class="cj-heading-l">{{ frontmatter.title }}</h2>
+    {{ markdown_output }}
+</div>
 {% endblock -%}

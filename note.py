@@ -28,7 +28,10 @@ class Note:
         return self.raw
 
     def get_frontmatter(self):
-        return self.frontmatter
+        f = self.frontmatter
+        if 'title' in self.frontmatter.keys():
+            f['title'] = self.frontmatter['title'][0]
+        return f
 
     def get_mod_date(self, readable=False):
         if readable:
