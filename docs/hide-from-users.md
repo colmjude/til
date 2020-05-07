@@ -1,6 +1,6 @@
 title: Hide element from users
 author: Colm Britton
-tags: html, accessibility
+tags: html, accessibility, design, frontend
 -------------------
 Different ways to hide things from various user groups.
 
