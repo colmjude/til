@@ -39,12 +39,21 @@ def render(path, template, **kwargs):
 loader = jinja2.FileSystemLoader(searchpath="./templates")
 env = jinja2.Environment(loader=loader)
 note_template = env.get_template("note.html")
+list_template = env.get_template("list.html")
 
 dirs, files = collect_notes()
 
+notes = []
+
 for f in files:
     note = Note(f)
+    notes.append(note.get_json())
     f = f.replace(config.NOTES_ROOT, config.DIST_ROOT)
     f = f.replace(".md", "")
     render(f + ".html", note_template, markdown_output=note.get_html(), frontmatter=note.get_frontmatter())
     print(f"Created {f}")
+
+# want it in chronilogical order
+sorted_notes = sorted(notes, key=lambda n: n['frontmatter']['mod_date'], reverse=True)
+render(config.DIST_ROOT + "index.html", list_template, notes=sorted_notes)
+

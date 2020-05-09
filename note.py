@@ -13,6 +13,8 @@ class Note:
     def __init__(self, path):
         self.path = path
         self.read_file()
+        self.date_format = '%d %B %Y'
+        self.slug = path.split("/")[-1].replace(".md", "")
 
     def read_file(self):
         _file = codecs.open(self.path, mode="r")
@@ -27,13 +29,39 @@ class Note:
     def get_raw(self):
         return self.raw
 
-    def get_frontmatter(self):
-        f = self.frontmatter
+    def extract_title(self):
+        title = ''
         if 'title' in self.frontmatter.keys():
-            f['title'] = self.frontmatter['title'][0]
+            titles = self.frontmatter.get('title')
+            return titles[0].strip('\"')
+
+    # converts ['frontend, js']
+    # to ['frontend', 'js']
+    def extract_tags(self):
+        return [t.strip(" ").lower() for t in self.frontmatter['tags'][0].split(",")]
+
+    def get_frontmatter(self):
+        # make a copy
+        f = dict(self.frontmatter)
+        
+        f['title'] = self.extract_title()
+        f['tags'] = self.extract_tags()
+        f['mod_date'] = self.get_mod_date(True)
         return f
 
     def get_mod_date(self, readable=False):
         if readable:
-            return timestamp_datetime(self.mod_date)
+            return timestamp_datetime(self.mod_date, format=self.date_format)
         return self.mod_date
+
+    def get_url(self):
+        d = os.path.dirname(self.path)
+        d = d.replace("docs", "notes", 1)
+        return "/" + d + "/" + self.slug
+
+    def get_json(self):
+        return {
+            'html': self.get_html(),
+            'frontmatter': self.get_frontmatter(),
+            'url': self.get_url()
+        }

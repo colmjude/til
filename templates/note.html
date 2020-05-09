@@ -2,7 +2,19 @@
 
 {%- block content %}
 <div class="markdown-output">
-    <h2 class="cj-heading-l">{{ frontmatter.title }}</h2>
-    {{ markdown_output }}
+    <a href="/notes" class="back-link">&lt;&lt; Back to notes</a>
+    <div class="note__head">
+        <h2 class="cj-heading-l note__title">{{ frontmatter.title }}</h2>
+        <span class="note__updated-date">Last updated {{ frontmatter['mod_date'] }}</span>
+    </div>
+    <div class="note__content">
+        {{ markdown_output }}
+    </div>
+    <div class="note__tags">
+        <h5 class="cj-heading-xs cj-headding--ib">Tags</h5>
+        {% for tag in frontmatter['tags'] %}
+            {{ tag }}{% if not loop.last %} / {% endif %}
+        {% endfor %}
+    </div>
 </div>
 {% endblock -%}

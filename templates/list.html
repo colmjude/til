@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{%- block content %}
+<div class="notes-container">
+    <h2 class="cj-heading-xl">All notes</h2>
+
+    <ol>
+    {%- for n in notes %}
+        <li class="notes-list__item">
+            <a href="{{ n['url'] }}">
+                <h4 class="cj-heading-s notes-list__item__title">{{ n['frontmatter']['title'] }}<span>Last updated {{ n['frontmatter']['mod_date'] }}</span></h4>
+                <span class="notes-list__item__tags">{% for tag in n['frontmatter']['tags'] %}
+                    {{ tag }}{% if not loop.last %} / {% endif %}
+                {% endfor %}</span>
+            </a>
+        </li>
+    {% endfor -%}
+    </ol>
+
+</div>
+
+{% endblock -%}
