@@ -3,7 +3,7 @@ tags: frontend, js
 author: Colm Britton
 --------------------
 
-[Huffduffer](https://huffduffer.com/colmjude/102092) has a nice little feature that helps a user copy some content. It puts the content in a <code>input<code> element and selects the whole lot when the user clicks on it.
+[Huffduffer](https://huffduffer.com/colmjude/102092) has a nice little feature that helps a user copy some content. It puts the content in a <code>input</code> element and selects the whole lot when the user clicks on it.
 
 It is an enhancement, done with JS.
 
