@@ -1,9 +1,8 @@
-
-title: "Tom Swifty"
+title: Tom Swifty
 tags: writing
 author: Colm Britton
 source: https://locusmag.com/2020/05/cory-doctorow-rules-for-writers/
---------------------
+---
 
 A **Tom Swifty** or **Tom Swiftie** is a phrase/sentence where the quoted sentence is linked to the speaker with a pun.
 

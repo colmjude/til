@@ -1,5 +1,4 @@
-
-title: "Change github submodule"
+title: Change github submodule
 tags: webdev, github
 author: Colm Britton
 --------------------

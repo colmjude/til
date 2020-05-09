@@ -1,4 +1,3 @@
-
 title: "Huffduffer input copying"
 tags: frontend, js
 author: Colm Britton
