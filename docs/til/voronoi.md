@@ -1,4 +1,3 @@
-
 title: Voronoi diagram
 tags: data, visualisation, mathematics
 author: Colm Britton

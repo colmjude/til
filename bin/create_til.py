@@ -3,8 +3,7 @@
 import os
 import sys
 
-frontmatter_str = """
-title: "<<title>>"
+frontmatter_str = """title: "<<title>>"
 tags:
 author: Colm Britton
 --------------------
