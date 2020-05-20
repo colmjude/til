@@ -21,7 +21,15 @@ class Note:
         self.raw_contents = _file.read()
         self.note = md.convert(self.raw_contents)
         self.frontmatter = md.Meta
+        self.draft = self.is_draft()
         self.mod_date = file_mod_timestamp(self.path)
+
+    def is_draft(self):
+        fm_draft = self.frontmatter.get('draft')
+        if fm_draft is not None:
+            if fm_draft[0].lower() == 'true':
+                return True
+        return False
 
     def get_html(self):
         return self.note
