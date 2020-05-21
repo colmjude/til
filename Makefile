@@ -9,7 +9,7 @@ copy/css:
 copy/imgs:
 	cp -r images/* dist/static/images/notes/
 
-deploy:
+deploy: render
 	scripts/deploy.sh dist/notes/ .
 
 
