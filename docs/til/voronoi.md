@@ -6,6 +6,8 @@ source: https://en.wikipedia.org/wiki/Voronoi_diagram
 
 A [Voronoi diagram](https://en.wikipedia.org/wiki/Voronoi_diagram) is a diagram where regions are calculated for a given point. Each region is all the points/pixels closer to the point we are interested in than any other. These regions are called Voronoi cells.
 
+![Animated example of voronoi diagram](/static/images/notes/Voronoi_growth_euclidean.gif)
+
 ### Examples
 
 * Voronoi diagrams are superimposed on oceanic plot charts so planes know where the nearest airfield is for in-flight diversions
