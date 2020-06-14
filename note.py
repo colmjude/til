@@ -55,6 +55,8 @@ class Note:
         f['title'] = self.extract_title()
         f['tags'] = self.extract_tags()
         f['mod_date'] = self.get_mod_date(True)
+        f['mod_timestamp'] = self.get_mod_date()
+
         return f
 
     def get_mod_date(self, readable=False):
