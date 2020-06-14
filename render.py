@@ -55,7 +55,14 @@ for f in files:
         print(f"Created {f}")
 
 # want it in chronilogical order
-sorted_notes = sorted(notes, key=lambda n: n['frontmatter']['mod_date'], reverse=True)
+sorted_notes = sorted(notes, key=lambda n: n['frontmatter']['mod_timestamp'], reverse=True)
 render(config.DIST_ROOT + "index.html", list_template, notes=sorted_notes)
 
+tags = {}
+for n in notes:
+    for tag in n['frontmatter']['tags']:
+        tags.setdefault(tag, {'notes':[]})
+        tags[tag]['notes'].append(n)
 
+for tag in tags.keys():
+    render(config.DIST_ROOT + "tag/" + tag + "/index.html", list_template, notes=tags[tag]['notes'], list_title=f"Tag: {tag}")

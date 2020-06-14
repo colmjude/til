@@ -2,7 +2,7 @@
 
 {%- block content %}
 <div class="notes-container">
-    <h2 class="cj-heading-xl">All notes</h2>
+    <h2 class="cj-heading-xl">{{ list_title|default("All notes") }}</h2>
 
     <ol>
     {%- for n in notes %}
