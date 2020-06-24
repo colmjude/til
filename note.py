@@ -56,6 +56,10 @@ class Note:
         f['tags'] = self.extract_tags()
         f['mod_date'] = self.get_mod_date(True)
         f['mod_timestamp'] = self.get_mod_date()
+        
+        if 'heroclasses' in f.keys():
+            class_list = self.extract_as_list(f['heroclasses'][0], ',')
+            f['heroclasses'] = " ".join(class_list)
 
         return f
 
@@ -68,6 +72,9 @@ class Note:
         d = os.path.dirname(self.path)
         d = d.replace("docs", "notes", 1)
         return "/" + d + "/" + self.slug
+
+    def extract_as_list(self, str, splitter):
+        return str.split(splitter)
 
     def get_json(self):
         return {
