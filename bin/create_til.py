@@ -2,10 +2,12 @@
 
 import os
 import sys
+import datetime
 
 frontmatter_str = """title: "<<title>>"
 tags:
 author: Colm Britton
+created: <<date>>
 --------------------
 
 """
@@ -18,8 +20,13 @@ def title_to_filename(title):
     return title.lower().replace(" ", "-")
 
 
+def replace_frontmatter_placeholder(text, placeholder, val):
+    return text.replace(placeholder, val)
+
+
 def create_file(args):
     til_dir = base_dir
+    today = datetime.date.today().strftime("%Y/%m/%d")
 
     if len(args) > 1:
         til_dir = til_dir + args[1]
@@ -32,7 +39,9 @@ def create_file(args):
         print(f"ERROR: {til_path} already exists")
     else:
         til_file = open(til_path, 'w')
-        til_file.write(frontmatter_str.replace("<<title>>", args[0]))
+        frontmatter = replace_frontmatter_placeholder(frontmatter_str, "<<title>>", args[0])
+        frontmatter = replace_frontmatter_placeholder(frontmatter, "<<date>>", today)
+        til_file.write(frontmatter)
         til_file.close()
 
 
