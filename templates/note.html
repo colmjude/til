@@ -1,16 +1,19 @@
 {% extends "base.html" %}
 
-{% if frontmatter['heroclasses'] %}
-    {% set heroClasses = frontmatter['heroclasses'] %}
+{% block heroBanner %}
+    {% set heroClasses = frontmatter['heroclasses'] if frontmatter['heroclasses'] else "" %}
     {% if 'blm' in heroClasses %}
-    {% block heroBanner %}
     <div class="hero-text {{ heroClasses }}">
         <h1 class="hero-text__title">Notes</h1>
         <span class="hero-text__caption">Black lives matter</span>
     </div>
-    {% endblock %}
+    {% else %}
+    <div class="hero-text {{ heroClasses }}">
+        <h1 class="hero-text__title">Notes</h1>
+        <span class="hero-text__caption">A collection of TILs, snippets and thoughts</span>
+    </div>
     {% endif %}
-{% endif %}
+{% endblock %}
 
 {%- block content %}
 <div class="markdown-output">
