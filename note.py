@@ -5,9 +5,18 @@ import codecs
 import markdown
 from markdown.extensions.wikilinks import WikiLinkExtension
 
-from helpers import file_mod_timestamp, timestamp_datetime
+from helpers import file_mod_timestamp, timestamp_datetime, title_to_slug
 
-md = markdown.Markdown(extensions = ['meta', WikiLinkExtension(base_url='/notes/', end_url='.html')])
+
+def wikilink_builder(label, base, end):
+    # this only does top level notes
+    # e.g. /notes/<note slug>.html
+    # need to do something more comprehensive
+    url = f"{base}{title_to_slug(label)}{end}"
+    return url
+
+
+md = markdown.Markdown(extensions = ['meta', WikiLinkExtension(base_url='/notes/', end_url='.html', build_url=wikilink_builder)])
 
 class Note:
     def __init__(self, path):

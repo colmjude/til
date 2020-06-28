@@ -10,3 +10,9 @@ def timestamp_datetime(timestamp, format="%Y-%m-%d %H:%M"):
 
 def file_mod_timestamp(path):
     return os.path.getmtime(path)
+
+def file_slug(filename: str):
+    return filename.split("/")[-1].replace(".md", "")
+
+def title_to_slug(title):
+    return title.lower().replace(" ", "-")

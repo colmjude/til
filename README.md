@@ -12,4 +12,10 @@ Install dependencies
 
 Create a note
 
-    $ python bin/create_til.py <<title of note>> 
+    $ python bin/create_til.py <<title of note>>
+
+### Custom Markdown
+
+WikiLinks are enabled. But currently only work for referencing top-level notes
+
+    [[WikiLink]] - becomes /notes/wikilink.html
