@@ -49,10 +49,10 @@ for f in files:
     note = Note(f)
     if not note.draft:
         notes.append(note.get_json())
-        f = f.replace(config.NOTES_ROOT, config.DIST_ROOT)
-        f = f.replace(".md", "")
-        render(f + ".html", note_template, markdown_output=note.get_html(), frontmatter=note.get_frontmatter())
-        print(f"Created {f}")
+        n = note.slug
+        n = n.replace(config.NOTES_ROOT, config.DIST_ROOT)
+        render(n + ".html", note_template, markdown_output=note.get_html(), frontmatter=note.get_frontmatter())
+        print(f"Created {n}")
 
 # want it in chronilogical order
 sorted_notes = sorted(notes, key=lambda n: n['frontmatter']['mod_timestamp'], reverse=True)

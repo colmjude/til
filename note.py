@@ -23,7 +23,13 @@ class Note:
         self.path = path
         self.read_file()
         self.date_format = '%d %B %Y'
-        self.slug = path.split("/")[-1].replace(".md", "")
+        self.slug = self.make_slug()
+
+    def make_slug(self):
+        path = self.path
+        original_name = path.split("/")[-1]
+        slug = self.path.split("/")[-1].replace(".md", "")
+        return path.replace(original_name, slug.replace(".", "-"))
 
     def read_file(self):
         _file = codecs.open(self.path, mode="r")
