@@ -8,8 +8,8 @@ frontmatter_str = """title: "<<title>>"
 tags:
 author: Colm Britton
 created: <<date>>
+draft: True
 --------------------
-
 """
 
 
@@ -24,9 +24,21 @@ def replace_frontmatter_placeholder(text, placeholder, val):
     return text.replace(placeholder, val)
 
 
+def prepare_template(title):
+    today = datetime.date.today().strftime("%Y/%m/%d")
+    frontmatter = replace_frontmatter_placeholder(frontmatter_str, "<<title>>", title)
+    frontmatter = replace_frontmatter_placeholder(frontmatter, "<<date>>", today)
+    return frontmatter
+
+
+def save_markdown_file(path, content):
+    til_file = open(path, 'w')
+    til_file.write(content)
+    til_file.close()
+
+
 def create_file(args):
     til_dir = base_dir
-    today = datetime.date.today().strftime("%Y/%m/%d")
 
     if len(args) > 1:
         til_dir = til_dir + args[1]
@@ -38,11 +50,8 @@ def create_file(args):
     if os.path.isfile(til_path):
         print(f"ERROR: {til_path} already exists")
     else:
-        til_file = open(til_path, 'w')
-        frontmatter = replace_frontmatter_placeholder(frontmatter_str, "<<title>>", args[0])
-        frontmatter = replace_frontmatter_placeholder(frontmatter, "<<date>>", today)
-        til_file.write(frontmatter)
-        til_file.close()
+        content = prepare_template(args[0])
+        save_markdown_file(til_path, content)
 
 
 if __name__ == "__main__":
