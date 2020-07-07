@@ -54,7 +54,7 @@ notes_list = []
 for note in notes.notes.values():
     if not note.draft:
         notes_list.append(note.get_json())
-        n = note.path.replace(".md", "")
+        n = note.path.replace(note.filename, note.slug)
         n = n.replace(config.NOTES_ROOT, config.DIST_ROOT)
         render(n + ".html", note_template, markdown_output=note.get_html(), frontmatter=note.get_frontmatter())
         print(f"Created {n}")
