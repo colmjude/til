@@ -5,39 +5,79 @@ import codecs
 import markdown
 from markdown.extensions.wikilinks import WikiLinkExtension
 
+from config import Config
+
 from helpers import file_mod_timestamp, timestamp_datetime, title_to_slug
 
-
-def wikilink_builder(label, base, end):
-    # this only does top level notes
-    # e.g. /notes/<note slug>.html
-    # need to do something more comprehensive
-    url = f"{base}{title_to_slug(label)}{end}"
-    return url
+config = Config()
 
 
-md = markdown.Markdown(extensions = ['meta', WikiLinkExtension(base_url='/notes/', end_url='.html', build_url=wikilink_builder)])
+def note_index():
+    md_list = markdown.Markdown(extensions = ['meta'])
+    notes = Notes(config.NOTES_ROOT, md_list)
+    idx = {k:v.get_url() for k,v in notes.notes.items() }
+    return idx
+
+
+class Notes:
+    def __init__(self, root_dir, md):
+        self.root_dir = root_dir
+        self.md = md
+        self.notes = self.collect()
+
+    def collect(self):
+        dnames = []
+        fnames = []
+        for root, dir_names, file_names in os.walk(self.root_dir):
+            for d in dir_names:
+                dnames.append(os.path.join(root, d))
+            for f in file_names:
+                fnames.append(os.path.join(root, f))
+        notes = {}
+        for f in fnames:
+            note = Note(f, self.md)
+            notes.setdefault(note.title, note)
+        return notes
+
+    def get_note(self, title):
+        return self.notes.get(title)
+
+
 
 class Note:
-    def __init__(self, path):
+    def __init__(self, path, md):
+        print(path)
         self.path = path
+        self.dir = "/".join(path.split("/")[:-1])
+        self.filename = path.split("/")[-1]
+        self.md = md
+
         self.read_file()
         self.date_format = '%d %B %Y'
         self.slug = self.make_slug()
 
-    def make_slug(self):
+    def split_filename(self):
         path = self.path
-        original_name = path.split("/")[-1]
-        slug = self.path.split("/")[-1].replace(".md", "")
-        return path.replace(original_name, slug.replace(".", "-"))
+        if "/" in path:
+            self.dir = "/".join(path.split("/")[:-1])
+            self.filename = path.split("/")[-1]
+        else:
+            print(self.path)
+            self.dir = "/"
+            self.filename = path
+
+    def make_slug(self):
+        filename = self.filename.replace(".md", "")
+        return filename.replace(".", "-")
 
     def read_file(self):
         _file = codecs.open(self.path, mode="r")
         self.raw_contents = _file.read()
-        self.note = md.convert(self.raw_contents)
-        self.frontmatter = md.Meta
+        self.note = self.md.convert(self.raw_contents)
+        self.frontmatter = self.md.Meta
         self.draft = self.is_draft()
         self.mod_date = file_mod_timestamp(self.path)
+        self.title = self.extract_title()
 
     def is_draft(self):
         fm_draft = self.frontmatter.get('draft')
@@ -85,6 +125,7 @@ class Note:
 
     def get_url(self):
         d = os.path.dirname(self.path)
+        # improve this
         d = d.replace("docs", "notes", 1)
         return "/" + d + "/" + self.slug
 

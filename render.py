@@ -3,8 +3,10 @@
 import os
 import jinja2
 from config import Config
+import markdown
+from markdown.extensions.wikilinks import WikiLinkExtension
 
-from note import Note
+from note import Notes, Note, note_index
 from helpers import file_mod_timestamp, timestamp_datetime
 
 
@@ -15,15 +17,18 @@ def file_slug(filename: str):
     return filename.split("/")[-1].replace(".md", "")
 
 
-def collect_notes():
-    dnames = []
-    fnames = []
-    for root, dir_names, file_names in os.walk(config.NOTES_ROOT):
-        for d in dir_names:
-            dnames.append(os.path.join(root, d))
-        for f in file_names:
-            fnames.append(os.path.join(root, f))
-    return dnames, fnames
+def initiate_markdown():
+    idx = note_index()
+
+    def wikilink_builder(label, base, end):
+        # this only does top level notes
+        # e.g. /notes/<note slug>.html
+        # need to do something more comprehensive
+        #notes = Notes(config.NOTES_ROOT)
+        #url = f"{base}{title_to_slug(label)}{end}"
+        return idx.get(label) + end
+
+    return markdown.Markdown(extensions = ['meta', WikiLinkExtension(base_url='/notes/', end_url='.html', build_url=wikilink_builder)])
 
 
 def render(path, template, **kwargs):
@@ -41,25 +46,25 @@ env = jinja2.Environment(loader=loader)
 note_template = env.get_template("note.html")
 list_template = env.get_template("list.html")
 
-dirs, files = collect_notes()
 
-notes = []
+notes = Notes(config.NOTES_ROOT, initiate_markdown())
+notes_list = []
 
-for f in files:
-    note = Note(f)
+
+for note in notes.notes.values():
     if not note.draft:
-        notes.append(note.get_json())
-        n = note.slug
+        notes_list.append(note.get_json())
+        n = note.path.replace(".md", "")
         n = n.replace(config.NOTES_ROOT, config.DIST_ROOT)
         render(n + ".html", note_template, markdown_output=note.get_html(), frontmatter=note.get_frontmatter())
         print(f"Created {n}")
 
 # want it in chronilogical order
-sorted_notes = sorted(notes, key=lambda n: n['frontmatter']['mod_timestamp'], reverse=True)
+sorted_notes = sorted(notes_list, key=lambda n: n['frontmatter']['mod_timestamp'], reverse=True)
 render(config.DIST_ROOT + "index.html", list_template, notes=sorted_notes)
 
 tags = {}
-for n in notes:
+for n in notes_list:
     for tag in n['frontmatter']['tags']:
         tags.setdefault(tag, {'notes':[]})
         tags[tag]['notes'].append(n)
