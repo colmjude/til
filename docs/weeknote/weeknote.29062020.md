@@ -1,5 +1,5 @@
 title: "Weeknote - 29 06 2020"
-tags:
+tags: weeknote
 author: Colm Britton
 created: 2020/06/30
 --------------------
