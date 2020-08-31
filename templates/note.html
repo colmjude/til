@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{% block pageTitle %}{{ frontmatter.title }} | Colm Britton's Notes | colmjude.com{% endblock %}
+
 {% block heroBanner %}
     {% set heroClasses = frontmatter['heroclasses'] if frontmatter['heroclasses'] else "" %}
     {% if 'blm' in heroClasses %}
