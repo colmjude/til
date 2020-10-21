@@ -9,12 +9,12 @@ copy/css:
 copy/imgs:
 	cp -r images/* dist/static/images/notes/
 
-deploy: render
+deploy: render deploy/imgs
 	scripts/deploy.sh dist/notes/ .
 
 
 deploy/imgs:
-	scripts/deploy.sh images/* static/images/notes/.
+	scripts/deploy.sh images/. static/images/notes/.
 
 render:
 	python3 render.py
@@ -22,3 +22,5 @@ render:
 
 clean:
 	rm -r dist/notes
+
+update: copy/imgs render
