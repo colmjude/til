@@ -14,3 +14,5 @@ You can do this in the **appearance panel**.
 * Set the offset values.
 
 Works the same for strokes.
+
+[Example of technique used for city labels in this tutorial](https://design.tutsplus.com/tutorials/how-to-create-a-vector-map-infographic-in-adobe-illustrator--cms-25865).
