@@ -11,7 +11,7 @@
                 <h4 class="cj-heading-s notes-list__item__title">{{ n['frontmatter']['title'] }}</h4>
             </a>
             <div class="notes-list__item__meta">
-                <span>Updated {{ n['frontmatter']['mod_date'] }}</span> |
+                <span>Updated <time datetime="{{ n['frontmatter']['mod_timestamp'] }}">{{ n['frontmatter']['mod_date'] }}</time></span> |
                 <span class="notes-list__item__tags">{% for tag in n['frontmatter']['tags'] %}
                     <a href="/notes/tag/{{tag}}">{{ tag }}</a>{% if not loop.last %} / {% endif %}
                 {% endfor %}</span>

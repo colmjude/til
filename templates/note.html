@@ -18,11 +18,11 @@
 {% endblock %}
 
 {%- block content %}
-<div class="markdown-output">
+<article class="markdown-output">
     <a href="/notes" class="back-link">&lt;&lt; Back to notes</a>
     <div class="note__head">
         <h2 class="cj-heading-l note__title">{{ frontmatter.title }}</h2>
-        <span class="note__updated-date">Last updated {{ frontmatter['mod_date'] }}</span>
+        <span class="note__updated-date">Last updated <time datetime="{{ frontmatter['mod_timestamp'] }}">{{ frontmatter['mod_date'] }}</time></span>
     </div>
     <div class="note__content">
         {{ markdown_output }}
@@ -33,5 +33,5 @@
             {{ tag }}{% if not loop.last %} / {% endif %}
         {% endfor %}
     </div>
-</div>
+</article>
 {% endblock -%}
