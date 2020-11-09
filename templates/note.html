@@ -30,7 +30,7 @@
     <div class="note__tags">
         <h5 class="cj-heading-xs cj-headding--ib">Tags</h5>
         {% for tag in frontmatter['tags'] %}
-            {{ tag }}{% if not loop.last %} / {% endif %}
+            <a href="/notes/tag/{{tag|lower|replace(' ', '-')}}">{{ tag }}</a>{% if not loop.last %} / {% endif %}
         {% endfor %}
     </div>
 </article>
