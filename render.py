@@ -45,6 +45,7 @@ loader = jinja2.FileSystemLoader(searchpath="./templates")
 env = jinja2.Environment(loader=loader)
 note_template = env.get_template("note.html")
 list_template = env.get_template("list.html")
+tags_template = env.get_template("tags.html")
 
 
 notes = Notes(config.NOTES_ROOT, initiate_markdown())
@@ -77,3 +78,7 @@ for n in notes_list:
 
 for tag in tags.keys():
     render(config.DIST_ROOT + "tag/" + slugify(tag) + "/index.html", list_template, notes=tags[tag]['notes'], list_title=f"Tag: {tag}")
+
+# render list of tags page
+sorted_tags = dict(sorted(tags.items(), key=lambda item: item[0]))
+render(config.DIST_ROOT + "tag/index.html", tags_template, tags=sorted_tags)

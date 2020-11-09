@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{%- block content %}
+<div class="notes-container">
+    <a href="/notes" class="back-link cjb-link">&lt;&lt; All notes</a>
+    <h2 class="cj-heading-xl">{{ list_title|default("All tags") }}</h2>
+
+    <ol>
+    {%- for tag in tags.keys() %}
+        <li class="notes-list__item">
+            <a href="/notes/tag/{{ tag|lower|replace(' ', '-') }}">
+                {{ tag }} - {{ tags[tag]['notes']|length }}
+            </a>
+        </li>
+    {% endfor -%}
+    </ol>
+
+</div>
+
+{% endblock -%}
