@@ -14,5 +14,5 @@ def file_mod_timestamp(path):
 def file_slug(filename: str):
     return filename.split("/")[-1].replace(".md", "")
 
-def title_to_slug(title):
-    return title.lower().replace(" ", "-")
+def slugify(s):
+    return s.lower().replace(" ", "-")

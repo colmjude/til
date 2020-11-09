@@ -7,7 +7,7 @@ import markdown
 from markdown.extensions.wikilinks import WikiLinkExtension
 
 from note import Notes, Note, note_index
-from helpers import file_mod_timestamp, timestamp_datetime
+from helpers import file_mod_timestamp, timestamp_datetime, slugify
 
 
 config = Config()
@@ -51,13 +51,19 @@ notes = Notes(config.NOTES_ROOT, initiate_markdown())
 notes_list = []
 
 
+def create_missing_dir(d):
+    if not os.path.exists(d):
+        os.makedirs(d)
+
+
 for note in notes.notes.values():
     if not note.draft:
         notes_list.append(note.get_json())
         n = note.path.replace(note.filename, note.slug)
         n = n.replace(config.NOTES_ROOT, config.DIST_ROOT)
-        render(n + ".html", note_template, markdown_output=note.get_html(), frontmatter=note.get_frontmatter())
-        print(f"Created {n}")
+        create_missing_dir(n)
+        render(f"{n}/index.html", note_template, markdown_output=note.get_html(), frontmatter=note.get_frontmatter())
+        print(f"Created {n}/index.html")
 
 # want it in chronilogical order
 sorted_notes = sorted(notes_list, key=lambda n: n['frontmatter']['mod_timestamp'], reverse=True)
@@ -70,4 +76,4 @@ for n in notes_list:
         tags[tag]['notes'].append(n)
 
 for tag in tags.keys():
-    render(config.DIST_ROOT + "tag/" + tag + "/index.html", list_template, notes=tags[tag]['notes'], list_title=f"Tag: {tag}")
+    render(config.DIST_ROOT + "tag/" + slugify(tag) + "/index.html", list_template, notes=tags[tag]['notes'], list_title=f"Tag: {tag}")

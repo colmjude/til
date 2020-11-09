@@ -7,7 +7,7 @@ from markdown.extensions.wikilinks import WikiLinkExtension
 
 from config import Config
 
-from helpers import file_mod_timestamp, timestamp_datetime, title_to_slug
+from helpers import file_mod_timestamp, timestamp_datetime
 
 config = Config()
 
