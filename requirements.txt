@@ -1,4 +1,15 @@
+appdirs==1.4.3
+attrs==19.3.0
+black==19.10b0
+click==7.1.2
 Jinja2==2.11.2
 Markdown==3.2.1
 MarkupSafe==1.1.1
+pathspec==0.8.0
 python-dotenv==0.13.0
+python-frontmatter==0.5.0
+PyYAML==5.3.1
+regex==2020.4.4
+six==1.14.0
+toml==0.10.0
+typed-ast==1.4.1

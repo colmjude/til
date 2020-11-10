@@ -24,15 +24,22 @@ def initiate_markdown():
         # this only does top level notes
         # e.g. /notes/<note slug>.html
         # need to do something more comprehensive
-        #notes = Notes(config.NOTES_ROOT)
-        #url = f"{base}{title_to_slug(label)}{end}"
+        # notes = Notes(config.NOTES_ROOT)
+        # url = f"{base}{title_to_slug(label)}{end}"
         return idx.get(label) + end
 
-    return markdown.Markdown(extensions = ['meta', WikiLinkExtension(base_url='/notes/', end_url='.html', build_url=wikilink_builder)])
+    return markdown.Markdown(
+        extensions=[
+            "meta",
+            WikiLinkExtension(
+                base_url="/notes/", end_url=".html", build_url=wikilink_builder
+            ),
+        ]
+    )
 
 
 def render(path, template, **kwargs):
-    #path = os.path.join(docs, path)
+    # path = os.path.join(docs, path)
     directory = os.path.dirname(path)
     if not os.path.exists(directory):
         os.makedirs(directory)
@@ -63,21 +70,33 @@ for note in notes.notes.values():
         n = note.path.replace(note.filename, note.slug)
         n = n.replace(config.NOTES_ROOT, config.DIST_ROOT)
         create_missing_dir(n)
-        render(f"{n}/index.html", note_template, markdown_output=note.get_html(), frontmatter=note.get_frontmatter())
+        render(
+            f"{n}/index.html",
+            note_template,
+            markdown_output=note.get_html(),
+            frontmatter=note.get_frontmatter(),
+        )
         print(f"Created {n}/index.html")
 
 # want it in chronilogical order
-sorted_notes = sorted(notes_list, key=lambda n: n['frontmatter']['mod_timestamp'], reverse=True)
+sorted_notes = sorted(
+    notes_list, key=lambda n: n["frontmatter"]["mod_timestamp"], reverse=True
+)
 render(config.DIST_ROOT + "index.html", list_template, notes=sorted_notes)
 
 tags = {}
 for n in notes_list:
-    for tag in n['frontmatter']['tags']:
-        tags.setdefault(tag, {'notes':[]})
-        tags[tag]['notes'].append(n)
+    for tag in n["frontmatter"]["tags"]:
+        tags.setdefault(tag, {"notes": []})
+        tags[tag]["notes"].append(n)
 
 for tag in tags.keys():
-    render(config.DIST_ROOT + "tag/" + slugify(tag) + "/index.html", list_template, notes=tags[tag]['notes'], list_title=f"Tag: {tag}")
+    render(
+        config.DIST_ROOT + "tag/" + slugify(tag) + "/index.html",
+        list_template,
+        notes=tags[tag]["notes"],
+        list_title=f"Tag: {tag}",
+    )
 
 # render list of tags page
 sorted_tags = dict(sorted(tags.items(), key=lambda item: item[0]))
