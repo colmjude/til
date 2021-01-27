@@ -1,10 +1,9 @@
-
 title: "Flake8"
 tags: webdev, python, commandline, development
 author: Colm Britton
 --------------------
 
-The Digital Land team use flake8 to ...
+The Digital Land team use [flake8](https://flake8.pycqa.org/en/latest/)(style guide enforcement).
 
 ### Exclude files
 
