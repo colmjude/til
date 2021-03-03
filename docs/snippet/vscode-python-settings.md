@@ -1,5 +1,5 @@
 title: Python settings for VSCode
-tags: webdev, development, snippet, productivity
+tags: webdev, development, snippet, productivity, vscode
 author: Colm Britton
 --------------------
 
