@@ -30,3 +30,8 @@ black:
 
 black-check:
 	black --check .
+
+flake8:
+	flake8 .
+
+lint:	black-check flake8
