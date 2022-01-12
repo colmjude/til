@@ -14,7 +14,7 @@ deploy: render deploy/imgs
 
 
 deploy/imgs:
-	scripts/deploy.sh images/. static/images/notes/.
+	scripts/deploy.sh images/ static/images/notes/
 
 render:
 	python3 render.py
