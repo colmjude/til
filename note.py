@@ -14,9 +14,9 @@ config = Config()
 
 
 def note_index():
-    md_list = markdown.Markdown(extensions = ['meta'])
+    md_list = markdown.Markdown(extensions=["meta"])
     notes = Notes(config.NOTES_ROOT, md_list)
-    idx = {k:v.get_url() for k,v in notes.notes.items() }
+    idx = {k: v.get_url() for k, v in notes.notes.items()}
     return idx
 
 
@@ -44,7 +44,6 @@ class Notes:
         return self.notes.get(title)
 
 
-
 class Note:
     def __init__(self, path, md):
         print(path)
@@ -54,7 +53,7 @@ class Note:
         self.md = md
 
         self.read_file()
-        self.date_format = '%d %B %Y'
+        self.date_format = "%d %B %Y"
         self.slug = self.make_slug()
 
     def split_filename(self):
@@ -79,12 +78,16 @@ class Note:
         self.draft = self.is_draft()
         self.mod_date = file_mod_timestamp(self.path)
         self.title = self.extract_title()
-        self.created_date = datetime.strptime(self.frontmatter['created'][0], "%Y/%m/%d").timestamp() if self.frontmatter.get('created') else file_mod_timestamp(self.path)
+        self.created_date = (
+            datetime.strptime(self.frontmatter["created"][0], "%Y/%m/%d").timestamp()
+            if self.frontmatter.get("created")
+            else file_mod_timestamp(self.path)
+        )
 
     def is_draft(self):
-        fm_draft = self.frontmatter.get('draft')
+        fm_draft = self.frontmatter.get("draft")
         if fm_draft is not None:
-            if fm_draft[0].lower() == 'true':
+            if fm_draft[0].lower() == "true":
                 return True
         return False
 
@@ -95,30 +98,32 @@ class Note:
         return self.raw
 
     def extract_title(self):
-        title = ''
-        if 'title' in self.frontmatter.keys():
-            titles = self.frontmatter.get('title')
-            return titles[0].strip('\"')
+        title = ""
+        if "title" in self.frontmatter.keys():
+            titles = self.frontmatter.get("title")
+            return titles[0].strip('"')
 
     # converts ['frontend, js']
     # to ['frontend', 'js']
     def extract_tags(self):
-        return [t.strip(" ").lower() for t in self.frontmatter['tags'][0].split(",")]
+        return [t.strip(" ").lower() for t in self.frontmatter["tags"][0].split(",")]
 
     def get_frontmatter(self):
         # make a copy
         f = dict(self.frontmatter)
-        
-        f['title'] = self.extract_title()
-        f['tags'] = self.extract_tags()
-        f['mod_date'] = timestamp_datetime(self.mod_date, format=self.date_format)
-        f['mod_timestamp'] = self.mod_date
-        f['created_date'] = timestamp_datetime(self.created_date, format=self.date_format)
-        f['created_timestamp'] = self.created_date
 
-        if 'heroclasses' in f.keys():
-            class_list = self.extract_as_list(f['heroclasses'][0], ',')
-            f['heroclasses'] = " ".join(class_list)
+        f["title"] = self.extract_title()
+        f["tags"] = self.extract_tags()
+        f["mod_date"] = timestamp_datetime(self.mod_date, format=self.date_format)
+        f["mod_timestamp"] = self.mod_date
+        f["created_date"] = timestamp_datetime(
+            self.created_date, format=self.date_format
+        )
+        f["created_timestamp"] = self.created_date
+
+        if "heroclasses" in f.keys():
+            class_list = self.extract_as_list(f["heroclasses"][0], ",")
+            f["heroclasses"] = " ".join(class_list)
 
         return f
 
@@ -133,7 +138,7 @@ class Note:
 
     def get_json(self):
         return {
-            'html': self.get_html(),
-            'frontmatter': self.get_frontmatter(),
-            'url': self.get_url()
+            "html": self.get_html(),
+            "frontmatter": self.get_frontmatter(),
+            "url": self.get_url(),
         }

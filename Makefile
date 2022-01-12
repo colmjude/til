@@ -24,3 +24,9 @@ clean:
 	rm -r dist/notes
 
 update: copy/imgs render
+
+black:
+	black .
+
+black-check:
+	black --check .
