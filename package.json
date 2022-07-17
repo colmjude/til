@@ -1,0 +1,33 @@
+{
+    "name": "colmjude-til",
+    "version": "0.1.0",
+    "description": "Notes and tings",
+    "main": "",
+    "scripts": {
+      "build:stylesheets": "npm run nps build.stylesheets",
+      "build:pages": "python application/render.py",
+      "watch:pages": "chokidar 'application/templates/**/*.html' 'application/data/**/*.json' -c 'make local-build'",
+      "watch:stylesheets": "npm run nps watch.stylesheets",
+      "watch:dist": "chokidar 'dist/static/stylesheets/**/*.css' -c 'make local-deploy'",
+      "watch": "npm-run-all --parallel watch:*",
+      "nps": "nps -c ./node_modules/colmjude-frontend/package-scripts.js"
+    },
+    "author": "Colm Britton",
+    "license": "ISC",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/colmjude/til.git"
+    },
+    "devDependencies": {
+      "browser-sync": "^2.26.7",
+      "chokidar-cli": "^3.0.0",
+      "npm-run-all": "^4.1.5"
+    },
+    "dependencies": {
+      "colmjude-frontend": "https://gitpkg.now.sh/colmjude/colmjude-frontend/package?main"
+    },
+    "browserslist": [
+      "defaults"
+    ]
+  }
+  
