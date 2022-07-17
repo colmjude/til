@@ -35,3 +35,8 @@ flake8:
 	flake8 .
 
 lint:	black-check flake8
+
+serve:
+	python -m http.server 8000 --bind 127.0.0.1 --directory dist
+
+include local.mk
