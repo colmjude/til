@@ -11,11 +11,13 @@
   <meta name="description" content="An about page for Colm Britton, designer, technologist and web tinkerer.">
   <meta name="author" content="Colm Britton">
 
-  
-<link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto:300,400,700" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:wght@400;600;700&family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
 
 
-  <link rel="stylesheet" href="/static/stylesheets/homepage1.css">
+  <!--<link rel="stylesheet" href="/static/stylesheets/colmjude-frontend.css">-->
+  <link rel="stylesheet" href="/static/stylesheets/colmjude-notes.css">
 
   <meta name="theme-color" content="#d95a45">
 
@@ -37,47 +39,23 @@
 
 </head>
 
-<body class="{% block htmlClasses %}{% endblock htmlClasses %} ">
+<body class="cj-template__body {% block htmlClasses %}{% endblock htmlClasses %} ">
   <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
 
+{% set subsectionHtml %}
+<div class="cj-top-bar__details__subsection">
+  <span>&sol;</span>
+  <a class="cj-top-bar__details__subsection__link" href="/notes">notes</a>
+</div>
+{% endset %}
+
 {% block cjHeader %}
-<header class="top-bar">
-
-	<div class="top-bar__details">
-		<a class="top-bar__details__link" href="/">
-			<svg version="1.1" id="Layer_1" class="logo-sqr" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 120 120" xml:space="preserve" aria-hidden="true">
-			<style type="text/css">
-				.st0{fill:#D95A45;}
-				.st1{fill:#1C2D43;}
-			</style>
-			<g>
-				<rect class="st0" width="120" height="120"/>
-				<rect y="80" class="st1" width="120" height="40"/>
-				<rect y="60" class="st1" width="60" height="10"/>
-				<rect x="75" y="90" class="st0" width="45" height="10"/>
-			</g>
-			</svg>
-			<h2 class="top-bar__name">Colmjude</h2>
-		</a>
-	</div>
-
-
-	<nav>
-		<input type="checkbox" id="tm" class="top-bar__menu-toggle">
-		<label for="tm" class="tm">Menu</label>
-		<ul class="top-bar__menu">
-			<li class="top-bar__menu__item">
-				<a class="top-bar__menu__item__link" href="/"><span>Home</span></a>
-			</li>
-			<li class="top-bar__menu__item">
-				<a class="top-bar__menu__item__link" href="/blog"><span>Blog</span></a>
-			</li>
-			<li class="top-bar__menu__item">
-				<a class="top-bar__menu__item__link" href="/about"><span>About</span></a>
-			</li>
-		</ul>
-	</nav>
-</header>
+{% from 'colmjude-frontend/components/header/macro.jinja' import cjHeader %}
+{{ cjHeader({
+  "subsection": {
+    "html": subsectionHtml
+  }
+}) }}
 {% endblock %}
 
 {% block heroBanner %}
@@ -87,12 +65,15 @@
 </div>
 {% endblock %}
 
-<main id="content">
+<main class="notes-content" id="content">
     {% block content %}{% endblock %}
 </main>
 
+{% from 'colmjude-frontend/components/footer/macro.jinja' import cjFooter %}
 {% block cjFooter %}
-{% include 'partials/footer.html' %}
+{{ cjFooter({
+  'classes': 'cj-!-margin-top-8'
+}) }}
 {% endblock %}
 
 {% block bodyEnd %}
