@@ -2,7 +2,7 @@
 
 {% block pageTitle %}{{ frontmatter.title }} | Colm Britton's Notes | colmjude.com{% endblock %}
 
-{% block heroBanner %}
+{% block notesHeader %}
     {% set heroClasses = frontmatter['heroclasses'] if frontmatter['heroclasses'] else "" %}
     {% if 'blm' in heroClasses %}
     <div class="hero-text {{ heroClasses }}">
@@ -10,27 +10,26 @@
         <span class="hero-text__caption">Black lives matter</span>
     </div>
     {% else %}
-    <div class="hero-text {{ heroClasses }}">
-        <h1 class="hero-text__title">Notes</h1>
-        <span class="hero-text__caption">A collection of TILs, snippets and thoughts</span>
-    </div>
+    {{ notesHeader({
+      "classes": "cj-content-container note-page",
+      "linkBack": true
+    }) }}
     {% endif %}
 {% endblock %}
 
 {%- block content %}
-<article class="markdown-output">
-    <a href="/notes" class="back-link">&lt;&lt; Back to notes</a>
+<article class="cj-content-container">
     <div class="note__head">
-        <h2 class="cj-heading-l note__title">{{ frontmatter.title }}</h2>
-        <span class="note__updated-date">Last updated <time datetime="{{ frontmatter['mod_timestamp'] }}">{{ frontmatter['mod_date'] }}</time></span>
+      <span class="note__updated-date"><time datetime="{{ frontmatter['mod_timestamp'] }}">{{ frontmatter['mod_date'] }}</time>{{ ' - ' + frontmatter['status'] if frontmatter['status'] }}</span>
+      <h2 class="cj-heading-l note__title">{{ frontmatter.title }}</h2>
     </div>
-    <div class="note__content">
+    <div class="markdown-output note__content">
         {{ markdown_output }}
     </div>
     <div class="note__tags">
-        <h5 class="cj-heading-xs cj-headding--ib">Tags</h5>
+        <h5 class="cj-heading-s cj-headding--ib note__tags__label">Tags</h5>
         {% for tag in frontmatter['tags'] %}
-            <a href="/notes/tag/{{tag|lower|replace(' ', '-')}}">{{ tag }}</a>{% if not loop.last %} / {% endif %}
+          <a class="cj-link" href="/notes/tag/{{tag|lower|replace(' ', '-')}}">{{ tag }}</a>{% if not loop.last %} / {% endif %}
         {% endfor %}
     </div>
 </article>

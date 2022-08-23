@@ -1,21 +1,34 @@
 {% extends "base.html" %}
 
-{%- block content %}
-<div class="notes-container">
-    <h2 class="cj-heading-xl">{{ list_title|default("All notes") }}</h2>
+{% block notesHeader %}
+  {% if notes_page_classes == "notes-index-page" %}
+    {{ notesHeader({
+      "classes": "cj-content-container " + notes_page_classes
+    }) }}
+  {% else %}
+    {{ notesHeader({
+      "classes": "cj-content-container " + notes_page_classes,
+      "linkBack": true,
+      "tag": tag
+    }) }}
+  {% endif %}
+    
+{% endblock %}
 
-    <ol>
+{%- block content %}
+<div class="cj-content-container">
+    <ol class="cj-list notes-list">
     {%- for n in notes %}
         <li class="notes-list__item">
-            <a href="{{ n['url'] }}">
-                <h4 class="cj-heading-s notes-list__item__title">{{ n['frontmatter']['title'] }}</h4>
+            <a class="notes-list__item__link" href="{{ n['url'] }}">
+                <h4 class="cj-heading-m notes-list__item__title">{{ n['frontmatter']['title'] }}</h4>
             </a>
             <div class="notes-list__item__meta">
                 <span><time datetime="{{ n['frontmatter']['created_timestamp'] }}">{{ n['frontmatter']['created_date'] }}</time></span>
                 {% if n['frontmatter']['tags']|length %}
                  |
                 <span class="notes-list__item__tags">{% for tag in n['frontmatter']['tags'] %}
-                    <a href="/notes/tag/{{tag}}">{{ tag }}</a>{% if not loop.last %} / {% endif %}
+                    <a class="cj-link" href="/notes/tag/{{tag}}">{{ tag }}</a>{% if not loop.last %} / {% endif %}
                 {% endfor %}</span>
                 {% endif %}
             </div>
