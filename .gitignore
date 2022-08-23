@@ -143,3 +143,4 @@ cython_debug/
 .DS_Store
 
 local.mk
+__pycache__
