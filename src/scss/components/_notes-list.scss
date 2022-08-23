@@ -1,0 +1,18 @@
+.notes-list {
+  .notes-list__item {
+    @include cj-responsive-margin(7, "bottom");
+  }
+}
+
+.notes-list__item__title {
+  margin-bottom: cj-spacing(1);
+  font-family: $cj-font-family-sans;
+}
+
+.notes-list__item__link {
+  @extend %cj-link--text-like;
+}
+
+.notes-list__item__meta {
+  @include cj-font($size: 20);
+}

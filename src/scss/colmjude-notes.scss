@@ -1,0 +1,28 @@
+@use "sass:math";
+@import "colmjude-frontend/colmjude-frontend";
+
+@import "objects/notes-container";
+@import "common/markdown-output";
+@import "components/all";
+@import "../../templates/components/notes-header/notes-header";
+
+.notes-content {
+  @include cj-responsive-padding(8, "bottom")
+}
+
+////////////////////////////////////////////////////////////////////////////////
+/// Note header
+/// ////////////////////////////////////////////////////////////////////////////
+
+.note__title {
+  margin-bottom: cj-spacing(9);
+}
+
+.note__updated-date {
+  display: inline-block;
+  @include cj-font($size: 16);
+}
+
+.note__content {
+  margin-bottom: cj-spacing(9);
+}

@@ -1,0 +1,40 @@
+.markdown-output {
+  h1 {
+    @extend %cj-heading-xl;
+  }
+
+  h2 {
+    @extend %cj-heading-l;
+  }
+
+  h3 {
+    @extend %cj-heading-m;
+  }
+
+  h4 {
+    @extend %cj-heading-s;
+  }
+
+  h5 {
+    @extend %cj-heading-xs;
+  }
+
+  p {
+    @extend %cj-body-m;
+  }
+
+  pre {
+    @extend %cj-code-block;
+    // can't work out why using rems ends up with font-size at 13px
+    // so hacking it for now
+    font-size: 14px !important;
+
+    @include mq($from: tablet) {
+      font-size: 16px !important;
+    }
+  }
+
+  a {
+    @extend %cj-link;
+  }
+}

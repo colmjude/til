@@ -1,0 +1,15 @@
+{% macro notesHeader(params) %}
+<div class="notes-header{{ ' ' + params.classes if params.classes }}">
+	<section class="notes-header__section">
+    <span>{% if params.linkBack %}
+      <a href="/notes" class="notes-header__title__back-link">Notes</a>
+    {% else -%}
+    Notes
+    {%- endif %}</span>
+  </section>
+  {% if params.tag %}
+  <section class="notes-header__section"><span>{{params.tag}}</span></section>
+  {% endif %}
+	<span class="notes-header__caption">A collection of thoughts, things I've learnt and things I want to remember</span>
+</div>
+{% endmacro %}

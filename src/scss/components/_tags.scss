@@ -1,0 +1,7 @@
+.note__tags {
+  @include cj-font($size: 20);
+}
+
+.note__tags__label {
+  font-family: $cj-font-family-sans
+}

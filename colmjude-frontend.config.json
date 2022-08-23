@@ -1,5 +1,5 @@
 {
     "scssPath": "src/scss",
     "stylesheetsOutputPath": "dist/static/stylesheets",
-    "watchPaths": "src/scss"
+    "watchPaths": "'src/scss' 'templates/components'"
 }

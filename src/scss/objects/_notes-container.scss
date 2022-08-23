@@ -1,0 +1,7 @@
+.notes-container {
+  margin: 0 15px;
+
+  @include mq($from: tablet) {
+    margin: 0;
+  }
+}
