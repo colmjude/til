@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 
+import datetime
 import os
 import sys
-import datetime
 
 frontmatter_str = """title: "<<title>>"
 tags:

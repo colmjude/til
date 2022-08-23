@@ -1,14 +1,15 @@
 #!/usr/bin/env python3
 
 import os
+
 import jinja2
-from config import Config
 import markdown
 from markdown.extensions.wikilinks import WikiLinkExtension
 
-from note import Notes, Note, note_index
-from helpers import file_mod_timestamp, timestamp_datetime, slugify
-
+from config import Config
+from helpers import file_mod_timestamp, slugify, timestamp_datetime
+from note import Note, Notes, note_index
+from application.jinja_setup import setup_jinja
 
 config = Config()
 
@@ -48,8 +49,8 @@ def render(path, template, **kwargs):
         f.write(template.render(**kwargs))
 
 
-loader = jinja2.FileSystemLoader(searchpath="./templates")
-env = jinja2.Environment(loader=loader)
+env = setup_jinja()
+
 note_template = env.get_template("note.html")
 list_template = env.get_template("list.html")
 tags_template = env.get_template("tags.html")
@@ -82,7 +83,12 @@ for note in notes.notes.values():
 sorted_notes = sorted(
     notes_list, key=lambda n: n["frontmatter"]["mod_timestamp"], reverse=True
 )
-render(config.DIST_ROOT + "index.html", list_template, notes=sorted_notes)
+render(
+    config.DIST_ROOT + "index.html",
+    list_template,
+    notes=sorted_notes,
+    notes_page_classes="notes-index-page",
+)
 
 tags = {}
 for n in notes_list:
@@ -96,6 +102,8 @@ for tag in tags.keys():
         list_template,
         notes=tags[tag]["notes"],
         list_title=f"Tag: {tag}",
+        notes_page_classes="notes-tag-page",
+        tag=tag,
     )
 
 # render list of tags page

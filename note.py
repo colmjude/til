@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 
-from datetime import datetime
-import os
 import codecs
+import os
+from datetime import datetime
+
 import markdown
 from markdown.extensions.wikilinks import WikiLinkExtension
 
 from config import Config
-
 from helpers import file_mod_timestamp, timestamp_datetime
 
 config = Config()
