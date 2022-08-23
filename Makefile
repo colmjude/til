@@ -13,12 +13,14 @@ copy/css:
 copy/imgs:
 	cp -r images/* dist/static/images/notes/
 
-deploy: render deploy/imgs
+deploy: render deploy/imgs deploy/stylesheet
 	scripts/deploy.sh dist/notes/ .
-
 
 deploy/imgs:
 	scripts/deploy.sh images/ static/images/notes/
+
+deploy/stylesheet:
+	scripts/deploy.sh dist/static/stylesheets/colmjude-notes.css static/stylesheets
 
 render:
 	python3 render.py

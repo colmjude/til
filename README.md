@@ -19,3 +19,13 @@ Create a note
 WikiLinks are enabled. But currently only work for referencing top-level notes
 
     [[WikiLink]] - becomes /notes/wikilink.html
+
+### To deploy
+
+Firstly set up `.env` file with credentials needed to ftp into webhost.
+
+```
+WEBHOST=<webhost>
+WEBPORT=<webport>
+PATHTODIR=<path to public_html dir>
+```
