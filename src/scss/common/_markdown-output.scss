@@ -5,14 +5,17 @@
 
   h2 {
     @extend %cj-heading-l;
+    @include cj-responsive-margin(6, "top")
   }
 
   h3 {
     @extend %cj-heading-m;
+    @include cj-responsive-margin(6, "top")
   }
 
   h4 {
     @extend %cj-heading-s;
+    @include cj-responsive-margin(4, "top")
   }
 
   h5 {
@@ -36,5 +39,10 @@
 
   a {
     @extend %cj-link;
+  }
+
+  ul {
+    @extend %cj-list;
+    @extend %cj-list--bullet;
   }
 }
