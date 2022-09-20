@@ -11,6 +11,7 @@ copy/css:
 
 
 copy/imgs:
+	mkdir -p dist/static/images/notes/
 	cp -r images/* dist/static/images/notes/
 
 deploy: render deploy/imgs deploy/stylesheet
@@ -51,6 +52,9 @@ assets:
 serve:
 	python -m http.server 8000 --bind 127.0.0.1 --directory dist
 
-local: render assets
+local: copy/imgs render assets
+
+watch:
+	npm run watch
 
 include local.mk
