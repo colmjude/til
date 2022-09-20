@@ -1,6 +1,8 @@
 title: "Black and white photography"
 tags: photography, photoshop
 author: Colm Britton
+created: 2020/05/25
+updated: 2020/05/25
 --------------------
 
 Followed this quick tutorial on [dramatic black and white effect in photoshop](https://www.youtube.com/watch?reload=9&v=3asqlda1fqg&feature=youtu.be)

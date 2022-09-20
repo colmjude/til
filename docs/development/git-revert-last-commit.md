@@ -1,7 +1,7 @@
 title: "Git, revert last commit"
 tags: webdev, git, commandline
 author: Colm Britton
-updated: 31/08/2022
+updated: 2022/08/31
 --------------------
 
 Sometimes I make a commit accidentally or make a mistake; miss a file, add a file I shouldn't, leave a debug (print statement), etc.
