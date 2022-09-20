@@ -40,6 +40,9 @@ $notes-header-height: 50px;
       left: -100px;
       bottom: -40px;
     }
+    @include mq($from: wide) {
+      max-width: 1150px;
+    }
   }
 
   &:last-of-type {
@@ -55,6 +58,9 @@ $notes-header-height: 50px;
         left: -112px;
         bottom: -32px;
         border-left: 2px solid $cj-orange-colour;
+      }
+      @include mq($from: wide) {
+        max-width: 1150px;
       }
     }
   }
