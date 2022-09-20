@@ -20,7 +20,7 @@
 {%- block content %}
 <article class="cj-content-container">
     <div class="note__head">
-      <span class="note__updated-date"><time datetime="{{ frontmatter['mod_timestamp'] }}">{{ frontmatter['mod_date'] }}</time>{{ ' - ' + frontmatter['status'] if frontmatter['status'] }}</span>
+      <span class="note__updated-date"><time datetime="{{ frontmatter['updated_timestamp'] }}">{{ frontmatter['updated_date'] }}</time>{{ ' - ' + frontmatter['status'] if frontmatter['status'] }}</span>
       <h2 class="cj-heading-l note__title">{{ frontmatter.title }}</h2>
     </div>
     <div class="markdown-output note__content">

@@ -24,7 +24,7 @@
                 <h4 class="cj-heading-m notes-list__item__title">{{ n['frontmatter']['title'] }}</h4>
             </a>
             <div class="notes-list__item__meta">
-                <span><time datetime="{{ n['frontmatter']['created_timestamp'] }}">{{ n['frontmatter']['created_date'] }}</time></span>
+                <span><time datetime="{{ n['frontmatter']['updated_timestamp'] }}">{{ n['frontmatter']['updated_date'] }}</time></span>
                 {% if n['frontmatter']['tags']|length %}
                  |
                 <span class="notes-list__item__tags">{% for tag in n['frontmatter']['tags'] %}

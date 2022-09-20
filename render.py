@@ -81,7 +81,7 @@ for note in notes.notes.values():
 
 # want it in chronilogical order
 sorted_notes = sorted(
-    notes_list, key=lambda n: n["frontmatter"]["mod_timestamp"], reverse=True
+    notes_list, key=lambda n: n["frontmatter"]["updated_timestamp"], reverse=True
 )
 render(
     config.DIST_ROOT + "index.html",

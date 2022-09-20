@@ -83,6 +83,11 @@ class Note:
             if self.frontmatter.get("created")
             else file_mod_timestamp(self.path)
         )
+        self.updated_date = (
+            datetime.strptime(self.frontmatter["updated"][0], "%Y/%m/%d").timestamp()
+            if self.frontmatter.get("updated")
+            else file_mod_timestamp(self.path)
+        )
 
     def is_draft(self):
         fm_draft = self.frontmatter.get("draft")
@@ -114,12 +119,18 @@ class Note:
 
         f["title"] = self.extract_title()
         f["tags"] = self.extract_tags()
+        # not sure this works so going to use updated date if it exists
         f["mod_date"] = timestamp_datetime(self.mod_date, format=self.date_format)
         f["mod_timestamp"] = self.mod_date
+
         f["created_date"] = timestamp_datetime(
             self.created_date, format=self.date_format
         )
         f["created_timestamp"] = self.created_date
+        f["updated_date"] = timestamp_datetime(
+            self.updated_date, format=self.date_format
+        )
+        f["updated_timestamp"] = self.updated_date
 
         if "heroclasses" in f.keys():
             class_list = self.extract_as_list(f["heroclasses"][0], ",")
