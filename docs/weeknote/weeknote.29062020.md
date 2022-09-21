@@ -2,6 +2,7 @@ title: "Weeknote - 29 06 2020"
 tags: weeknote
 author: Colm Britton
 created: 2020/06/30
+updated: 2020/06/30
 --------------------
 
 Another week. Another attempt at week notes. But this time with greater emphasis on **notes**.

@@ -2,6 +2,7 @@ title: "Fortnight note 13/07/2020 & 20/07/2020"
 tags: weeknote, busy, AOC
 author: Colm Britton
 created: 2020/07/31
+updated: 2020/07/31
 --------------------
 
 2 weeks worth of notes and I’m still late with them. That sums up the last fortnight. It has been incredibly busy, both at home and at work.

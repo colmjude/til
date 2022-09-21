@@ -2,6 +2,7 @@ title: "Weeknote 27th July 2020"
 tags: weeknote, big tech
 author: Colm Britton
 created: 2020/07/31
+updated: 2020/07/31
 --------------------
 
 I had a crazy week at work trying to produce some diagrams under extreme time pressure. Wasn't ideal.
