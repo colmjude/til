@@ -1,5 +1,9 @@
 {% extends "base.html" %}
 
+{% block canonicalTag -%}
+<link rel="canonical" href="https://www.colmjude.com/notes/{{ tag + '/' if tag }}" />
+{%- endblock canonicalTag %}
+
 {% block notesHeader %}
   {% if notes_page_classes == "notes-index-page" %}
     {{ notesHeader({
