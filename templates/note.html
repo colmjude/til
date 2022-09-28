@@ -2,6 +2,10 @@
 
 {% block pageTitle %}{{ frontmatter.title }} | Colm Britton's Notes | colmjude.com{% endblock %}
 
+{% block canonicalTag -%}
+<link rel="canonical" href="{{ canonical_url }}" />
+{%- endblock canonicalTag %}
+
 {% block notesHeader %}
     {% set heroClasses = frontmatter['heroclasses'] if frontmatter['heroclasses'] else "" %}
     {% if 'blm' in heroClasses %}

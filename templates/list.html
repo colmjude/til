@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block canonicalTag -%}
-<link rel="canonical" href="https://www.colmjude.com/notes/{{ tag + '/' if tag }}" />
+<link rel="canonical" href="https://www.colmjude.com/notes/{{ 'tag/' + tag + '/' if tag }}" />
 {%- endblock canonicalTag %}
 
 {%- block notesHeader -%}

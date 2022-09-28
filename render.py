@@ -65,17 +65,27 @@ def create_missing_dir(d):
         os.makedirs(d)
 
 
+def strip_prefix(s, prefix):
+    if s.startswith(prefix):
+        return s[len(prefix) :]
+    return s
+
+
 for note in notes.notes.values():
     if not note.draft:
         notes_list.append(note.get_json())
         n = note.path.replace(note.filename, note.slug)
         n = n.replace(config.NOTES_ROOT, config.DIST_ROOT)
+        canonical_path = strip_prefix(
+            note.path.replace(note.filename, note.slug), "docs/"
+        )
         create_missing_dir(n)
         render(
             f"{n}/index.html",
             note_template,
             markdown_output=note.get_html(),
             frontmatter=note.get_frontmatter(),
+            canonical_url="{}/{}/".format(config.BASE_URL, canonical_path),
         )
         print(f"Created {n}/index.html")
 
