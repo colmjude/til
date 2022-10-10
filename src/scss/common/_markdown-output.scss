@@ -45,4 +45,11 @@
     @extend %cj-list;
     @extend %cj-list--bullet;
   }
+
+  p,
+  li {
+    code {
+      @extend %cj-code;
+    }
+  }
 }
