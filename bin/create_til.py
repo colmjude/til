@@ -8,6 +8,7 @@ frontmatter_str = """title: "<<title>>"
 tags:
 author: Colm Britton
 created: <<date>>
+updated: <<date>>
 draft: True
 --------------------
 """
@@ -32,7 +33,7 @@ def prepare_template(title):
 
 
 def save_markdown_file(path, content):
-    til_file = open(path, 'w')
+    til_file = open(path, "w")
     til_file.write(content)
     til_file.close()
 
