@@ -74,6 +74,7 @@ class Note:
         _file = codecs.open(self.path, mode="r")
         self.raw_contents = _file.read()
         self.note = self.md.convert(self.raw_contents)
+        self.markdown_content = "\n".join(self.md.lines)
         self.frontmatter = self.md.Meta
         self.draft = self.is_draft()
         self.mod_date = file_mod_timestamp(self.path)
@@ -151,5 +152,12 @@ class Note:
         return {
             "html": self.get_html(),
             "frontmatter": self.get_frontmatter(),
+            "url": self.get_url(),
+        }
+
+    def to_json(self):
+        return {
+            "content": self.markdown_content,
+            **self.get_frontmatter(),
             "url": self.get_url(),
         }
