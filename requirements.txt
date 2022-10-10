@@ -13,5 +13,6 @@ python-frontmatter==0.5.0
 PyYAML
 regex==2020.4.4
 six==1.14.0
+sqlite-utils
 toml==0.10.0
 typed-ast==1.4.1
