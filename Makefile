@@ -14,7 +14,9 @@ copy/imgs:
 	mkdir -p dist/static/images/notes/
 	cp -r images/* dist/static/images/notes/
 
-deploy: render deploy/imgs deploy/stylesheet
+deploy: render deploy/imgs deploy/stylesheet deploy/notes
+
+deploy/notes:
 	scripts/deploy.sh dist/notes/ .
 
 deploy/imgs:

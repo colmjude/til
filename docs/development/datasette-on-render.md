@@ -3,7 +3,7 @@ tags: webdev, datasette, render.com, sqlite
 author: Colm Britton
 description: Get datasette working on Render
 created: 2022/10/10
-updated: 2022/10/10
+updated: 2022/10/11
 --------------------
 
 I managed to get a datasette instance running on Render.com.
