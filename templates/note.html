@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 
 {% block pageTitle %}{{ frontmatter.title }} | Colm Britton's Notes | colmjude.com{% endblock %}
+{% set noteTitle = frontmatter.title %}
+{% set noteDescription = frontmatter.description if frontmatter.description else 'A note about something or other.' %}
 
 {% block canonicalTag -%}
 <link rel="canonical" href="{{ canonical_url }}" />

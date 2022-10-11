@@ -119,6 +119,11 @@ class Note:
         f = dict(self.frontmatter)
 
         f["title"] = self.extract_title()
+        f["description"] = (
+            self.frontmatter.get("description")[0].strip('"')
+            if self.frontmatter.get("description")
+            else None
+        )
         f["tags"] = self.extract_tags()
         # not sure this works so going to use updated date if it exists
         f["mod_date"] = timestamp_datetime(self.mod_date, format=self.date_format)

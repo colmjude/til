@@ -24,8 +24,8 @@
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@colmbritton" />
-  <meta name="twitter:title" content="Colmjude.com about" />
-  <meta name="twitter:description" content="The about page for Colm Britton's home on the web." />
+  <meta name="twitter:title" content="{{ noteTitle }} | Notes | colmjude.com about" />
+  <meta name="twitter:description" content="{{ noteDescription|default('A note about something or other.') }}" />
   <meta name="twitter:image" content="https://colmjude.com/test/static/images/twitter-home-card.png" />
 
   <!--[if lt IE 9]>
@@ -48,14 +48,14 @@
 </div>
 {% endset %}
 
-{% block cjHeader %}
+{%- block cjHeader %}
 {% from 'colmjude-frontend/components/header/macro.jinja' import cjHeader %}
 {{ cjHeader({
   "subsection": {
     "html": subsectionHtml
   }
 }) }}
-{% endblock %}
+{% endblock -%}
 
 <div class="notes-container">
   {% from 'components/notes-header/macro.jinja' import notesHeader %}
