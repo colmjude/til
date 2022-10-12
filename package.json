@@ -6,6 +6,7 @@
     "scripts": {
       "build:stylesheets": "npm run nps build.stylesheets",
       "build:pages": "python application/render.py",
+      "build:javascripts": "npm run nps build.javascripts",
       "watch:pages": "chokidar 'application/templates/**/*.html' 'application/data/**/*.json' -c 'make local-build'",
       "watch:stylesheets": "npm run nps watch.stylesheets",
       "watch:dist": "chokidar 'dist/static/stylesheets/**/*.css' -c 'make local-deploy'",

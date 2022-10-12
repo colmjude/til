@@ -41,4 +41,18 @@
 
 </div>
 
+<div class="app-search-container">
+  <h2>Search</h2>
+  <form>
+    <label for="search">Search</label>
+    <input id="searchbox" name="search" type="search" style="width: 60%">
+  </form>
+  <div id="results"></div>
+</div>
+
+{% endblock -%}
+
+{% block bodyEnd %}
+{{ super() }}
+<script src="/static/javascripts/notes-search.js"></script>
 {% endblock -%}
