@@ -41,13 +41,14 @@
 
 </div>
 
-<div class="app-search-container">
-  <h2>Search</h2>
+<div id="search" class="app-search-container cj-content-container">
   <form>
-    <label for="search">Search</label>
-    <input id="searchbox" name="search" type="search" style="width: 60%">
+    <div class="cj-form-group">
+      <label class="cj-label--xl cj-label--bold" for="search">Search notes</label>
+      <input class="cj-input" id="searchbox" name="search" type="search" style="width: 60%">
+    </div>
   </form>
-  <div id="results"></div>
+  <div id="app-search-results"></div>
 </div>
 
 {% endblock -%}
