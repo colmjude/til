@@ -8,7 +8,7 @@
       "build:pages": "python application/render.py",
       "build:javascripts": "npm run nps build.javascripts",
       "watch:pages": "chokidar 'application/templates/**/*.html' 'application/data/**/*.json' -c 'make local-build'",
-      "watch:stylesheets": "npm run nps watch.stylesheets",
+      "watch:assets": "npm run nps watch.assets",
       "watch:dist": "chokidar 'dist/static/stylesheets/**/*.css' -c 'make local-deploy'",
       "watch": "npm-run-all --parallel watch:*",
       "nps": "nps -c ./node_modules/colmjude-frontend/package-scripts.js"

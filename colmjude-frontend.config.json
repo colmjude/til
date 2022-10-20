@@ -2,5 +2,5 @@
     "scssPath": "src/scss",
     "stylesheetsOutputPath": "dist/static/stylesheets",
     "jsOutputPath": "dist/static/javascripts",
-    "watchPaths": "'src/scss' 'templates/components'"
+    "watchPaths": "'src/scss' 'templates/components' 'src/javascripts'"
 }
