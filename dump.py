@@ -39,8 +39,8 @@ def dump_notes():
 
     output = pipeline([notes.notes[note].to_json() for note in notes.notes])
 
-    with open("notes.json", "w") as f:
-        json.dump(output, f)
+    # with open("notes.json", "w") as f:
+    #     json.dump(output, f)
 
     write_sqlite(output)
 
