@@ -7,7 +7,7 @@ from note import Notes, note_index
 
 
 def write_sqlite(notes):
-    db = sqlite_utils.Database("tmp/notes.db")
+    db = sqlite_utils.Database("dumps/notes.db")
     db["notes"].insert_all(notes)
     db["notes"].enable_fts(["title", "content"])
 
