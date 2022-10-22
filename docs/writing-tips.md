@@ -1,4 +1,4 @@
-title: "Writing tips"
+title: Writing tips
 tags: writing, tips, collection, resources
 author: Colm Britton
 --------------------
