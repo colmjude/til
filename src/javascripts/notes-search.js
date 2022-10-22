@@ -25,7 +25,19 @@ from notes
 where notes_fts match :search || "*"
   order by rank limit 5;`
 
+function setupShortKey($searchbox) {
+  document.addEventListener('keydown', e => {
+    if (e.shiftKey && e.ctrlKey && e.key === 'S') {
+      // prevent any default action happening
+      e.preventDefault();
+      // Place your code here
+      $searchbox.focus()
+    }
+  });
+}
+
 const searchbox = document.getElementById("searchbox");
+setupShortKey(searchbox);
 
 // Used to avoid race-conditions:
 let requestInFlight = null;
