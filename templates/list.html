@@ -41,4 +41,19 @@
 
 </div>
 
+<div id="search" class="app-search-container cj-content-container">
+  <form>
+    <div class="cj-form-group">
+      <label class="cj-label--xl cj-label--bold" for="search">Search notes</label>
+      <input class="cj-input" id="searchbox" name="search" type="search" style="width: 60%">
+    </div>
+  </form>
+  <div id="app-search-results"></div>
+</div>
+
+{% endblock -%}
+
+{% block bodyEnd %}
+{{ super() }}
+<script src="/static/javascripts/notes-search.js"></script>
 {% endblock -%}

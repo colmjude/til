@@ -50,6 +50,7 @@ isort:
 
 assets:
 	npm run build:stylesheets
+	npm run build:javascripts
 
 serve:
 	python -m http.server 8000 --bind 127.0.0.1 --directory dist

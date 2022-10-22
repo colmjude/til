@@ -38,7 +38,7 @@
   }
 
   a {
-    @extend %cj-link;
+    @include cj-link-style($font-family: inherit);
   }
 
   ul {
