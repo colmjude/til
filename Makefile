@@ -1,3 +1,6 @@
+# current git branch
+BRANCH := $(shell git rev-parse --abbrev-ref HEAD)
+
 init: 
 	python3 -m pip install -r requirements.txt
 	npm install
@@ -61,3 +64,13 @@ watch:
 	npm run watch
 
 include local.mk
+
+remove-db:
+	rm dumps/notes.db
+
+sqlite-db: remove-db
+	python dump.py
+
+commit-sqlite::
+	git add dumps/notes.db
+	git diff --quiet && git diff --staged --quiet || (git commit -m "Rebuilt sqlite db $(shell date +%F)"; git push origin $(BRANCH))
