@@ -17,5 +17,6 @@ def initiate_markdown(idx, base_url="/notes/"):
             WikiLinkExtension(
                 base_url=base_url, end_url=".html", build_url=wikilink_builder
             ),
+            "fenced_code",
         ]
     )

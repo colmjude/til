@@ -14,7 +14,7 @@ config = Config()
 
 
 def note_index():
-    md_list = markdown.Markdown(extensions=["meta"])
+    md_list = markdown.Markdown(extensions=["meta", "fenced_code"])
     notes = Notes(config.NOTES_ROOT, md_list)
     idx = {k: v.get_url() for k, v in notes.notes.items()}
     return idx
