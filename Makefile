@@ -63,7 +63,9 @@ local: copy/imgs render assets
 watch:
 	npm run watch
 
-include local.mk
+# - means it will be ignored if file doesn't exist.
+# See https://stackoverflow.com/questions/8346118/check-if-a-makefile-exists-before-including-it
+-include local.mk
 
 remove-db:
 	rm dumps/notes.db
