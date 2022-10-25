@@ -37,5 +37,7 @@
 }
 
 .app-search-link {
+  position: relative;
   @include cj-font($size: 20);
+  z-index: 5;
 }
