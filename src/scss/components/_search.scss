@@ -35,3 +35,7 @@
 .app-search-highlight {
   background: yellow;
 }
+
+.app-search-link {
+  @include cj-font($size: 20);
+}

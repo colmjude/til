@@ -28,6 +28,9 @@ deploy/imgs:
 deploy/stylesheet:
 	scripts/deploy.sh dist/static/stylesheets/colmjude-notes.css static/stylesheets
 
+deploy/javascripts:
+	scripts/deploy.sh dist/static/javascripts/notes-search.js static/javascripts
+
 render:
 	python3 render.py
 
