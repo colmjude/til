@@ -40,5 +40,5 @@ jobs:
       run: make sqlite-db
 
     - name: Commit package
-      run: make commit-package
+      run: make commit-sqlite
 
