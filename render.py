@@ -87,6 +87,8 @@ for note in notes.notes.values():
             markdown_output=note.get_html(),
             frontmatter=note.get_frontmatter(),
             canonical_url="{}/{}/".format(config.BASE_URL, canonical_path),
+            note=note,
+            edit_url="{}/{}".format(config.REPO_BASE_URL, note.path),
         )
         print(f"Created {n}/index.html")
 

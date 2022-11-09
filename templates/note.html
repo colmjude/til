@@ -38,5 +38,8 @@
           <a class="cj-link" href="/notes/tag/{{tag|lower|replace(' ', '-')}}">{{ tag }}</a>{% if not loop.last %} / {% endif %}
         {% endfor %}
     </div>
+    <div class="note__meta">
+      <p><a class="cj-link" href="{{ edit_url }}">Edit on GitHub</a></p>
+    </div>
 </article>
 {% endblock -%}

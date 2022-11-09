@@ -1,0 +1,11 @@
+$app-border-colour: lighten(#121217, 5);
+
+.note__meta {
+  margin: 15px 0;
+  padding-top: 15px;
+  border-top: 1px solid $app-border-colour;
+
+  & > p {
+    margin: 0;
+  }
+}
