@@ -11,6 +11,8 @@
   <section class="notes-header__section"><span>{{params.tag}}</span></section>
   {% endif %}
 	<span class="notes-header__caption">A collection of thoughts, things I've learnt and things I want to remember</span>
+  {% if params.include_search %}
   <div class="app-search-link"><a href="#search" class="cj-link">Search notes</a></div>
+  {% endif %}
 </div>
 {% endmacro %}

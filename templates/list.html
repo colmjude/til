@@ -7,13 +7,15 @@
 {%- block notesHeader -%}
   {%- if notes_page_classes == "notes-index-page" -%}
     {{ notesHeader({
-      "classes": "cj-content-container " + notes_page_classes
+      "classes": "cj-content-container " + notes_page_classes,
+      "include_search": true
     }) }}
   {%- else -%}
     {{ notesHeader({
       "classes": "cj-content-container " + notes_page_classes,
       "linkBack": true,
-      "tag": tag
+      "tag": tag,
+      "include_search": true
     }) }}
   {%- endif -%}
 {%- endblock -%}
