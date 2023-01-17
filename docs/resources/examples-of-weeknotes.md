@@ -11,3 +11,10 @@ Here are some examples of weeknotes:
 
 * [WRA weeknotes](https://welsh-revenue-authority.github.io/weeknotes/property-data-poc/)
 * [Learn by making](https://learnbymaking.wales/en/updates/)
+* [UK Parliament - Ontologies team](https://ukparliament.github.io/ontologies/meta/weeknotes/)
+* [Matt Edgar weeknotes](https://blog.mattedgar.com/tag/weeknotes/)
+
+
+Here are some examples of documenting work:
+
+* [WRA Prototypes](https://welsh-revenue-authority.github.io/property-data-poc/en/prototypes/)
