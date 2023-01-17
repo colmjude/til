@@ -31,6 +31,9 @@ deploy/stylesheet:
 deploy/javascripts:
 	scripts/deploy.sh dist/static/javascripts/notes-search.js static/javascripts
 
+deploy/resources:
+	scripts/deploy.sh static/resources/ static/resources/
+
 render:
 	python3 render.py
 
