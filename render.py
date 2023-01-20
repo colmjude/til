@@ -10,6 +10,7 @@ from config import Config
 from helpers import file_mod_timestamp, slugify, timestamp_datetime
 from note import Note, Notes, note_index
 from application.jinja_setup import setup_jinja
+from bin.twitter_embed_extension import TwitterEmbedExtension
 
 config = Config()
 
@@ -29,6 +30,8 @@ def initiate_markdown():
         # url = f"{base}{title_to_slug(label)}{end}"
         return idx.get(label) + end
 
+    # use getattr because config is an object with attributes not a dict
+    tw_config = getattr(config, "TW_CONFIG")
     return markdown.Markdown(
         extensions=[
             "meta",
@@ -36,6 +39,7 @@ def initiate_markdown():
                 base_url="/notes/", end_url=".html", build_url=wikilink_builder
             ),
             "fenced_code",
+            TwitterEmbedExtension(**tw_config),
         ]
     )
 

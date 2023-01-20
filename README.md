@@ -20,6 +20,23 @@ WikiLinks are enabled. But currently only work for referencing top-level notes
 
     [[WikiLink]] - becomes /notes/wikilink.html
 
+### Embed tweets
+
+To use the markdown extension set the access credentials in `.env`.
+
+```
+TW_API_KEY=<key>
+TW_API_KEY_SECRET=<key-secret>
+TW_ACCESS_TOKEN=<token>
+TW_ACCESS_TOKEN_SECRET=<token-secret>
+```
+
+And use it using the following format
+
+```
+{{:twitter https://twitter.com/ColmBritton/status/1583455055088271360}}
+```
+
 ### To deploy
 
 Firstly set up `.env` file with credentials needed to ftp into webhost.
