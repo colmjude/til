@@ -10,7 +10,7 @@ from config import Config
 from helpers import file_mod_timestamp, slugify, timestamp_datetime
 from note import Note, Notes, note_index
 from application.jinja_setup import setup_jinja
-from bin.twitter_embed_extension import TwitterEmbedExtension
+from markdowntweetembed.tweetembed import TweetEmbedExtension
 
 config = Config()
 
@@ -39,7 +39,7 @@ def initiate_markdown():
                 base_url="/notes/", end_url=".html", build_url=wikilink_builder
             ),
             "fenced_code",
-            TwitterEmbedExtension(**tw_config),
+            TweetEmbedExtension(**tw_config),
         ]
     )
 
