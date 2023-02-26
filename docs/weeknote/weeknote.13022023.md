@@ -1,8 +1,8 @@
-title: "Weeknote 136th Feb 2023"
+title: "Weeknote 13th Feb 2023"
 tags: weeknote, dluch, digital-land, data, regulation
 author: Colm Britton
 created: 2023/02/13
-updated: 2023/02/20
+updated: 2023/02/22
 --------------------
 
 I started back at DLUCH this week with the digital land team and had a normal first week, chatting with everyone and getting the lay of the land.
