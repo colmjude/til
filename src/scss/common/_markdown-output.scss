@@ -56,4 +56,12 @@
   img {
     max-width: 100%;
   }
+
+  blockquote {
+    @extend .cj-pullquote;
+
+    strong {
+      font-weight: inherit;
+    }
+  }
 }
