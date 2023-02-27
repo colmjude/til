@@ -25,7 +25,7 @@ I’m quite excited about [Passkeys](https://developer.apple.com/passkeys/) or a
 
 ### CSS logical properties
 
-T[his blog post by Andy Bell](https://andy-bell.co.uk/css-logical-properties/) is a good place to start with CSS logical properties (e.g. `• [margin-block-start](https://developer.mozilla.org/en-US/docs/Web/CSS/margin-block-start)`). 
+[his blog post by Andy Bell](https://andy-bell.co.uk/css-logical-properties/) is a good place to start with CSS logical properties (e.g. [`margin-block-start`](https://developer.mozilla.org/en-US/docs/Web/CSS/margin-block-start)). 
 
 [Logical properties](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Logical_Properties) take into account direction of the document e.g. left to right or right to left. And instead of explicitly setting margins and paddings on a specific side you can set more flexible properties that tell the browser to set the margin or padding in the direction the user reads.
 
