@@ -19,6 +19,8 @@ It has been an interesting but challenging task. 4 years’ worth of decisions h
 
 We’ve been stepping through the model, piece by piece and I’ve been attempting to make sense of it all by mapping it out on [Miro](https://miro.com/).
 
+![Screenshot of the Miro board where we've been mapping out the digital land data model](/static/images/notes/miro-board-spec-and-config.png)
+
 I was pleased with the progress we made and we were able to simplify a couple of parts, but the board is still littered with unanswered questions.
 
 ## Design debt stacks up
