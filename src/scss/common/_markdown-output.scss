@@ -46,6 +46,11 @@
     @extend %cj-list--bullet;
   }
 
+  ol {
+    @extend %cj-list;
+    @extend %cj-list--number;
+  }
+
   p,
   li {
     code {
