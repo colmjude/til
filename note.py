@@ -72,8 +72,8 @@ class Note:
             self.filename = path
 
     def make_slug(self):
-        filename = self.filename.replace(".md", "")
-        filename = self.filename.replace(" ", "-")
+        parts = self.filename.split(".md")
+        filename = parts[0].replace(" ", "-")
         return filename.replace(".", "-")
 
     def extract_frontmatter(self):
