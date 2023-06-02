@@ -1,10 +1,11 @@
+---
 title: Voronoi diagram
 tags: data, visualisation, mathematics
 author: Colm Britton
 source: https://en.wikipedia.org/wiki/Voronoi_diagram
 created: 2020/05/14
 updated: 2022/08/22
---------------------
+---
 
 A [Voronoi diagram](https://en.wikipedia.org/wiki/Voronoi_diagram) is a diagram where regions are calculated for a given point. Each region is all the points/pixels closer to the point we are interested in than any other. These regions are called Voronoi cells.
 

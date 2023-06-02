@@ -1,3 +1,4 @@
+---
 title: Tom Swifty
 tags: writing
 author: Colm Britton

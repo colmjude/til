@@ -1,9 +1,10 @@
+---
 title: "Headings, labels and legends"
 tags: accessibility, design, frontend
 author: Colm Britton
 created: 2020/05/21
 updated: 2020/05/21
---------------------
+---
 
 You can now safely use `h1` elements inside a `legend` element or add a `label` element inside a `h1` element.
 

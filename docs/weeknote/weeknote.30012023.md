@@ -1,9 +1,10 @@
+---
 title: "Weeknote 30th Jan 2023"
 tags: weeknote, matter, thread, learnbymaking, flask, sketchnotes
 author: Colm Britton
 created: 2023/01/30
 updated: 2023/02/07
---------------------
+---
 
 I’m publishing these weeknotes on the Tuesday after the week in question finished. I was very close to giving up on them but forced myself to publish something.
 

@@ -1,9 +1,10 @@
+---
 title: "A simple checklist for images"
 tags: webdev, images, development, sustainability
 author: Colm Britton
 created: 2022/09/28
 updated: 2022/09/28
---------------------
+---
 
 Images make up a large portion of a website.
 

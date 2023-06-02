@@ -1,9 +1,10 @@
+---
 title: "Weeknote 23rd Jan 2023"
 tags: weeknote, favicon, data, reflecting
 author: Colm Britton
 created: 2023/01/23
 updated: 2023/01/30
---------------------
+---
 
 It has been a funny old week. I’ve spoken to a lot of potential clients but for one reason or another not quite got things over the line.
 

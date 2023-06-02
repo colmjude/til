@@ -1,9 +1,10 @@
+---
 title: Embedding tweets in markdown notes
 tags: webdev, development, twitter, markdown, python
 author: Colm Britton
 created: 2023/01/20
 updated: 2023/01/20
---------------------
+---
 
 I wanted to embed a tweet in a note. I thought, everyone does this so it must be easy.
 

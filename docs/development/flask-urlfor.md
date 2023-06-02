@@ -1,9 +1,10 @@
+---
 title: "Using flask url_for"
 tags: webdev, python, development, til
 author: Colm Britton
 created: 2023/05/03
 updated: 2023/05/03
---------------------
+---
 
 I find myself using the `url_for` function a lot.
 

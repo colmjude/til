@@ -1,7 +1,8 @@
+---
 title: "Using custom domain from Reg123 on heroku"
 tags: webdev, hosting, DNS
 author: Colm Britton
---------------------
+---
 
 I wanted to use a domain I own for a small python app running on [heroku](https://www.heroku.com/home).
 

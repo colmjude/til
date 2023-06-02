@@ -1,8 +1,9 @@
+---
 title: "Clever uses of data"
 tags: data, examples
 author: Colm Britton
 created: 2020/07/14
---------------------
+---
 
 A collection of clever uses of available data. Useful for selling the value of open and high quality data.
 

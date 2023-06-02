@@ -1,7 +1,8 @@
+---
 title: "Notes on Hackitt Report"
 tags: planning, work, housing, notes
 author: Colm Britton
---------------------
+---
 
 The Hackitt report is an important report commissioned after [the catastrophic Grenfell Tower fire](https://en.wikipedia.org/wiki/Grenfell_Tower_fire).
 

@@ -1,9 +1,10 @@
+---
 title: JS Snippets
 tags: webdev, js, snippets
 author: Colm Britton
 created: 2023/02/01
 updated: 2023/02/01
---------------------
+---
 
 TIL you can use logic, such as a ternary operator, in ES6 template literals (or back tick strings).
 

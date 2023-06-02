@@ -1,7 +1,8 @@
+---
 title: "Illustrator tip: rectangle backgrounds for text"
 tags: illustrator, text, background, repeatable, technique
 author: Colm Britton
---------------------
+---
 
 Sometimes you’ll want a background for your text that adjusts to the text. And to be able to repeat it for many text items.
 

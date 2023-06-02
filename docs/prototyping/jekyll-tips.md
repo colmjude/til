@@ -1,9 +1,10 @@
+---
 title: Jekyll tips
 tags: prototyping, development, jekyll, github-pages
 author: Colm Britton
 created: 2022/10/28
 updated: 2022/11/01
---------------------
+---
 
 Can extend a template by adding frontmatter to `.html` template file. E.g. extend `default.html` with
 

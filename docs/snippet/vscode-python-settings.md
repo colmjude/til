@@ -1,7 +1,8 @@
+---
 title: Python settings for VSCode
 tags: webdev, development, snippet, productivity, vscode
 author: Colm Britton
---------------------
+---
 
 I've been using Visual studio code since early 2020. I have been able to write more and better Python code by using a few of the inbuilt python features.
 

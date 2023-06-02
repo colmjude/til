@@ -1,9 +1,10 @@
+---
 title: "Weeknote 06 07 2020"
 tags: weeknote
 author: Colm Britton
 created: 2020/07/14
 updated: 2020/07/14
---------------------
+---
 
 This week flew by. But I’m not quite sure why it it felt so busy.
 

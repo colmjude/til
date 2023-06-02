@@ -1,7 +1,8 @@
+---
 title: Use Rsync to copy lots of files
 tags: development, commandline, tip, til
 author: Colm Britton
---------------------
+---
 
 **Rsync** is a more powerful **cp** commandline utility. It helps you replicate the contents of a whole directory, sub-directories included.
 

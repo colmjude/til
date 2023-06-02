@@ -1,9 +1,10 @@
+---
 title: "Stein's law"
 tags: law
 author: Colm Britton
 created: 2023/01/09
 updated: 2023/01/09
---------------------
+---
 
 "If something cannot go on forever, it will stop"
 

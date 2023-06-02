@@ -1,7 +1,8 @@
+---
 title: JS settings for VSCode
 tags: webdev, development, snippet, productivity, vscode
 author: Colm Britton
---------------------
+---
 
 I follow the StandardJs guidelines for any JS I write.
 

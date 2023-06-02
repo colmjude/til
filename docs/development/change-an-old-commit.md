@@ -1,9 +1,10 @@
+---
 title: Change an old commit
 tags: webdev, git, commandline, development
 author: Colm Britton
 created: 2023/01/23
 updated: 2023/01/23
---------------------
+---
 
 Sometimes you might need to change an old commit. For example, I recently noticed I'd included an api in a commit. I don;t want people seeing that so deleting it in a new commit isn't enough. It would still be in the commit hostory if I did that so I needed a way to remove as if it had never been there.
 

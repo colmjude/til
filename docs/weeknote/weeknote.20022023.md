@@ -1,9 +1,12 @@
+---
 title: "Weeknote 20th Feb 2023"
 tags: weeknote, dluhc, design-debt, miro, chatgpt
 author: Colm Britton
+redirect:
+- url: /notes/weeknote/weeknote-20022023/
 created: 2023/02/20
 updated: 2023/02/26
---------------------
+---
 
 This week was a short week for me. I only worked 3 days and spent 2 days off-grid, chilling with Vanessa.
 

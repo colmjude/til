@@ -1,8 +1,9 @@
+---
 title: "Learning about black lives in the UK"
 tags: learning, society, history, blm
 author: Colm Britton
 heroclasses: hero-blm
---------------------
+---
 
 A record of some of the things I've learnt or heard about race disparities (mainly in the UK). These are either things I've not come across before or links to useful things for me to refer back to.
 

@@ -1,9 +1,10 @@
+---
 title: Dual coding theory
 tags: til, concept, theory, learning
 author: Colm Britton
 created: 2023/01/18
 updated: 2023/02/01
---------------------
+---
 
 Came across it in Eva's course on sketchnotes.
 

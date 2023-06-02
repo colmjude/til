@@ -1,9 +1,10 @@
+---
 title: "Weeknote 6th Feb 2023"
 tags: weeknote, passkeys, borodle, css, 
 author: Colm Britton
 created: 2023/02/06
 updated: 2023/02/12
---------------------
+---
 
 The 6th of Feb? Already? Where did the start of the year go? 😱
 

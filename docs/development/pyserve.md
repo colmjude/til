@@ -1,7 +1,8 @@
+---
 title: "Python server command"
 tags: webdev, python, commandline, development
 author: Colm Britton
---------------------
+---
 
 I use the inbuilt python server a lot. It allows me to test a directory of HTML files.
 

@@ -1,9 +1,10 @@
+---
 title: "Sankey diagram"
 tags: data, visualisation, charts, diagrams
 author: Colm Britton
 created: 2020/09/23
 updated: 2020/09/23
---------------------
+---
 
 A type of flow diagram that shows proportionality, e.g. the arrows/items are sized.
 

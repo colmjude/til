@@ -4,6 +4,8 @@ import codecs
 import os
 from datetime import datetime
 
+import frontmatter
+
 import markdown
 from markdown.extensions.wikilinks import WikiLinkExtension
 
@@ -49,6 +51,9 @@ class Note:
         print(path)
         self.path = path
         self.dir = "/".join(path.split("/")[:-1])
+        self.parent_category = ""
+        if "/" in self.dir:
+            self.parent_category = self.dir.split("/")[-1]
         self.filename = path.split("/")[-1]
         self.md = md
 
@@ -68,33 +73,40 @@ class Note:
 
     def make_slug(self):
         filename = self.filename.replace(".md", "")
+        filename = self.filename.replace(" ", "-")
         return filename.replace(".", "-")
+
+    def extract_frontmatter(self):
+        _note = frontmatter.load(self.path)
+        return _note.metadata
 
     def read_file(self):
         _file = codecs.open(self.path, mode="r")
         self.raw_contents = _file.read()
         self.note = self.md.convert(self.raw_contents)
         self.markdown_content = "\n".join(self.md.lines)
-        self.frontmatter = self.md.Meta
+        self.frontmatter = self.extract_frontmatter()
         self.draft = self.is_draft()
         self.mod_date = file_mod_timestamp(self.path)
         self.title = self.extract_title()
+        created_date = self.frontmatter.get("created", "2000/01/01")
         self.created_date = (
-            datetime.strptime(self.frontmatter["created"][0], "%Y/%m/%d").timestamp()
+            datetime.strptime(created_date, "%Y/%m/%d").timestamp()
             if self.frontmatter.get("created")
             else file_mod_timestamp(self.path)
         )
         self.updated_date = (
-            datetime.strptime(self.frontmatter["updated"][0], "%Y/%m/%d").timestamp()
+            datetime.strptime(
+                self.frontmatter.get("updated", created_date), "%Y/%m/%d"
+            ).timestamp()
             if self.frontmatter.get("updated")
             else file_mod_timestamp(self.path)
         )
 
     def is_draft(self):
-        fm_draft = self.frontmatter.get("draft")
-        if fm_draft is not None:
-            if fm_draft[0].lower() == "true":
-                return True
+        fm_draft = self.frontmatter.get("draft", False)
+        if fm_draft:
+            return True
         return False
 
     def get_html(self):
@@ -104,15 +116,14 @@ class Note:
         return self.raw
 
     def extract_title(self):
-        title = ""
-        if "title" in self.frontmatter.keys():
-            titles = self.frontmatter.get("title")
-            return titles[0].strip('"')
+        return self.frontmatter.get("title").strip('"')
 
     # converts ['frontend, js']
     # to ['frontend', 'js']
     def extract_tags(self):
-        return [t.strip(" ").lower() for t in self.frontmatter["tags"][0].split(",")]
+        return [
+            t.strip(" ").lower() for t in self.frontmatter.get("tags", []).split(",")
+        ]
 
     def get_frontmatter(self):
         # make a copy

@@ -1,9 +1,10 @@
+---
 title: "If-else statements in Make"
 tags: development, make
 author: Colm Britton
 created: 2021/10/12
 updated: 2021/10/12
---------------------
+---
 
 You can use `if/else` statements in your makefiles.
 

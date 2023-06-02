@@ -1,9 +1,10 @@
+---
 title: How to favicon
 tags: web, development, design, brand, how-to
 author: Colm Britton
 created: 2023/01/13
 updated: 2023/01/17
---------------------
+---
 
 Favicons have always been one of those things I don't like doing.
 

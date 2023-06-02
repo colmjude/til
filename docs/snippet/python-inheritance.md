@@ -1,7 +1,8 @@
+---
 title: "Python class inheritance"
 tags: development, snippet, inheritance, python
 author: Colm Britton
---------------------
+---
 
 An example of class inheritance in python.
 

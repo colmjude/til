@@ -1,8 +1,9 @@
+---
 title: Xargs command
 tags: commandline, development, til, tip
 author: Colm Britton
 source: Jon Bramley
---------------------
+---
 
 You can use the `xargs` command to pass the output of one command to another. Mind blown.
 

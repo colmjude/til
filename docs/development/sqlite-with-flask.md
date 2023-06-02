@@ -1,7 +1,8 @@
+---
 title: "SQLite db and flask"
 tags: webdev, python, flask, development, sqlite, database
 author: Colm Britton
---------------------
+---
 
 Steps to create and use an SQLite db with a flask app. Assumes using flask factory project structure.
 

@@ -1,7 +1,8 @@
+---
 title: "Read SQL into dataframe"
 tags: webdev, python, flask, development, sqlite, database, pandas
 author: Colm Britton
---------------------
+---
 
 The key line is:
 

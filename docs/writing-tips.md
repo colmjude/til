@@ -1,7 +1,8 @@
+---
 title: Writing tips
 tags: writing, tips, collection, resources
 author: Colm Britton
---------------------
+---
 
 Writing is a vital skill. A skill worth practising and honing.
 

@@ -1,7 +1,8 @@
+---
 title: "insert-hidden-text-js"
 tags: accessibility, js, web-dev
 author: Colm Britton
---------------------
+---
 
 When progressively enhancing elements you might have the need to add some visually hidden text (text that is not displayed but that will be read by a screen reader).
 

@@ -1,8 +1,9 @@
+---
 title: "Working with PRs"
 tags: git, development, snippet
 author: Colm Britton
 created: 2020/07/02
---------------------
+---
 
 ## Testing locally
 

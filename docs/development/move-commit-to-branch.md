@@ -1,7 +1,8 @@
+---
 title: "Move a commit to a different branch"
 tags: webdev, git, commandline
 author: Colm Britton
---------------------
+---
 
 Sometimes you might be working on a branch. Maybe it is a new feature or an experiment. But a change you make should apply across the board straight away. Not only when the feature is complete.
 

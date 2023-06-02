@@ -1,7 +1,8 @@
+---
 title: Change github submodule
 tags: webdev, github
 author: Colm Britton
---------------------
+---
 
 Remove old submodule
 

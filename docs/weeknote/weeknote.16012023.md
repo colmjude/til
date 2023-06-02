@@ -1,9 +1,10 @@
+---
 title: "Weeknote 16th Jan 2023"
 tags: weeknote, webdev, sketchnotes, work
 author: Colm Britton
 created: 2023/01/16
 updated: 2023/01/23
---------------------
+---
 
 This week I had a week off from the daily grind but it still felt pretty busy. I tried to use the week as an opportunity to start 2023 in good shape.
 

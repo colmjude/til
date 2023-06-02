@@ -1,7 +1,8 @@
+---
 title: "Velveting"
 tags: food, chinese, asian, technique
 author: Colm Britton
---------------------
+---
 
 Mum made a great peppered steak stir-fry last week, and she told me the key was **velveting**; she had marinated it with some baking powder which apparently makes cheaper cuts of meat more tender.
 

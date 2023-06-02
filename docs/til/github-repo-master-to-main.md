@@ -1,7 +1,8 @@
+---
 title: "Changing github repo branches from master to main"
 tags: development webdev, github
 author: Colm Britton
---------------------
+---
 
 Naming the main branch `master` has always felt a bit weird. Rightly, there is recognition, triggered by the BLM movement, this should change to `main`.
 

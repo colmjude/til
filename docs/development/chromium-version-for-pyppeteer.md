@@ -1,9 +1,10 @@
+---
 title: "Updating Chromium version you use with pyppeteer"
 tags: pyppeteer, chromium, screenshots, python
 author: Colm Britton
 created: 2023/02/12
 updated: 2023/02/12
---------------------
+---
 
 I was working on a simple screenshotting tool but noticed the pages weren't rendering properly in the screenshots.
 

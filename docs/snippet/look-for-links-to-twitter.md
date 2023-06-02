@@ -1,7 +1,8 @@
+---
 title: "Script to look for links to twitter"
 tags: webdev, code, gist
 author: Colm Britton
---------------------
+---
 
 Recently, I wanted to try out the [BeautifulSoup python library](https://pypi.org/project/beautifulsoup4/).
 
