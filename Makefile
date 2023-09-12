@@ -36,7 +36,7 @@ deploy/resources:
 
 render:
 	python3 render.py
-
+	python3 application/redirects.py
 
 clean:
 	rm -r dist/notes
