@@ -1,7 +1,9 @@
 ---
-title: "Fortnight note 13/07/2020 & 20/07/2020"
+title: "Weeknote #3"
 tags: weeknote, busy, AOC
 author: Colm Britton
+redirect:
+- url: /notes/weeknote/weeknote-13072020/
 created: 2020/07/31
 updated: 2020/07/31
 ---

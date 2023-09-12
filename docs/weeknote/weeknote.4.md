@@ -1,7 +1,9 @@
 ---
-title: "Weeknote 27th July 2020"
+title: "Weeknote #4"
 tags: weeknote, big tech
 author: Colm Britton
+redirect:
+- url: /notes/weeknote/weeknote-27072020/
 created: 2020/07/31
 updated: 2020/07/31
 ---

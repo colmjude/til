@@ -1,5 +1,5 @@
 ---
-title: "Weeknote 20th Feb 2023"
+title: "Weeknote #10"
 tags: weeknote, dluhc, design-debt, miro, chatgpt
 author: Colm Britton
 redirect:

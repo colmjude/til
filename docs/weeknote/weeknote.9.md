@@ -1,7 +1,9 @@
 ---
-title: "Weeknote 13th Feb 2023"
+title: "Weeknote #9"
 tags: weeknote, dluch, digital-land, data, regulation
 author: Colm Britton
+redirect:
+- url: /notes/weeknote/weeknote-13022023/
 created: 2023/02/13
 updated: 2023/02/22
 ---

@@ -1,7 +1,9 @@
 ---
-title: "Weeknote 6th Feb 2023"
+title: "Weeknote #8"
 tags: weeknote, passkeys, borodle, css, 
 author: Colm Britton
+redirect:
+- url: /notes/weeknote/weeknote-06022023/
 created: 2023/02/06
 updated: 2023/02/12
 ---

@@ -1,9 +1,9 @@
 ---
-title: "Weeknote (March - April 2023)"
+title: "Weeknote #11"
 tags: weeknote, dluhc, data-standards, holiday, food, chatgpt
 author: Colm Britton
 redirect:
-  - /notes/weeknote/weeknote-13022023/
+- url: /notes/weeknote/weeknote-28042023/
 created: 2023/04/28
 updated: 2023/05/04
 ---

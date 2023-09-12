@@ -1,7 +1,9 @@
 ---
-title: "Weeknote - 29 06 2020"
+title: "Weeknote #1"
 tags: weeknote
 author: Colm Britton
+redirect:
+- url: /notes/weeknote/weeknote-29062020/
 created: 2020/06/30
 updated: 2020/06/30
 ---

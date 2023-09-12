@@ -1,7 +1,9 @@
 ---
-title: "Weeknote 16th Jan 2023"
+title: "Weeknote #5"
 tags: weeknote, webdev, sketchnotes, work
 author: Colm Britton
+redirect:
+- url: /notes/weeknote/weeknote-16012023/
 created: 2023/01/16
 updated: 2023/01/23
 ---

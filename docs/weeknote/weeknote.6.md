@@ -1,7 +1,9 @@
 ---
-title: "Weeknote 23rd Jan 2023"
+title: "Weeknote #6"
 tags: weeknote, favicon, data, reflecting
 author: Colm Britton
+redirect:
+- url: /notes/weeknote/weeknote-23012023/
 created: 2023/01/23
 updated: 2023/01/30
 ---
