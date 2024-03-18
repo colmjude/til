@@ -1,6 +1,6 @@
 ---
 title: "Weeknote #14"
-tags: weeknote, dluhc, data-standards, versioning, chatgpt
+tags: weeknote, dluhc, data-standards, versioning, chatgpt, travel, development-plans
 author: Colm Britton
 created: 2023/09/18
 updated: 2024/03/18
