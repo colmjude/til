@@ -2,7 +2,8 @@
 title: "Git, revert last commit"
 tags: webdev, git, commandline
 author: Colm Britton
-updated: 2022/08/31
+created: 2022/08/31
+updated: 2023/09/11
 ---
 
 Sometimes I make a commit accidentally or make a mistake; miss a file, add a file I shouldn't, leave a debug (print statement), etc.
@@ -23,7 +24,7 @@ Apparently, using `-C` argument means you don't need to change the commit messag
 
 #### Delete last commit
 
-You can remove to commit completely.
+Alternatively, you can remove the commit completely.
 
 To do so add the `--hard` option to the previous `reset` command.
 
