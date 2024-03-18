@@ -3,7 +3,7 @@ title: Embedding tweets in markdown notes
 tags: webdev, development, twitter, markdown, python
 author: Colm Britton
 created: 2023/01/20
-updated: 2023/01/20
+updated: 2023/09/11
 ---
 
 I wanted to embed a tweet in a note. I thought, everyone does this so it must be easy.
@@ -35,7 +35,12 @@ For example
 
 Which should embed one of my tweets...
 
+```
 {{:twitter https://twitter.com/ColmBritton/status/1583455055088271360}}
+```
+I've had to comment this out because it has stopped working... the oembed method no longer works. Apparently it is something to do with twitter (or X) making us use v2 of the api and as far as I can see there is no endpoint you can call to get the oembed code.
+
+What a shame. Back to the drawing board.
 
 ### Useful links
 
