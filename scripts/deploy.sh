@@ -10,4 +10,5 @@ DEST=$2
 
 echo $FILE
 
+# scp -P $WEBPORT -r $(find $FILE -type f -not -name '.DS_Store') $WEBHOST:$PATHTODIR/$DEST
 scp -P $WEBPORT -r $FILE $WEBHOST:$PATHTODIR/$DEST
