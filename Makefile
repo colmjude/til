@@ -38,6 +38,9 @@ render:
 	python3 render.py
 	python3 application/redirects.py
 
+recent/notes:
+	python3 recent_updates.py
+
 clean:
 	rm -r dist/notes
 
