@@ -3,7 +3,7 @@ title: "Weeknote #18"
 tags: weeknote, work, london, racism, power, bread
 author: Colm Britton
 created: 2024/03/15
-updated: 2024/03/22
+updated: 2024/03/24
 ---
 
 *This “weeknote” covers the first couple of weeks of March 2024.*
@@ -45,8 +45,8 @@ On the whole subject, I found Samuel Kasumu's intervention quite powerful and we
 The more power you have (whether from money, position or privilege), the more you should do to counter society's imbalances. If you have a platform, use it kindly. What you do and say matters.
 
 <blockquote>
-With great power comes great responsibility!
-<i>—- Uncle Ben</i>
+  <p>With great power comes great responsibility!</p>
+  <p><i>—- Uncle Ben</i></p>
 </blockquote>
 
 Just a couple of months ago, I was listening to a popular podcast (I won’t say which - it is not my intention to castigate them), which is one almighty platform. They said something clumsy, something they shouldn’t really be saying or, at the very least, something they don’t need to say. There are alternative phrases. So I emailed them, asking them to think about the power they have and the phrases they use. No reply yet but, I do hope they listen.
