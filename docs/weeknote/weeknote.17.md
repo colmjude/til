@@ -22,7 +22,7 @@ Things are not going so well 😰
 
 ## What I’m reading / thinking about
 
-**Klopp**
+#### Klopp
 
 I spend a lot of time thinking about Klopp these days: how good it has been, how much I will miss Klopp’s Liverpool, and I wonder if we’ll ever be the same without him. Etc, etc.
 All very rational things for a nearly 40-year-old man to be thinking about 🤣

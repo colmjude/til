@@ -5,22 +5,33 @@
 
   h2 {
     @extend %cj-heading-l;
-    @include cj-responsive-margin(6, "top");
+    @include cj-responsive-margin(9, "top");
     font-weight: 400;
   }
 
   h3 {
     @extend %cj-heading-m;
-    @include cj-responsive-margin(6, "top");
+    @include cj-responsive-margin(8, "top");
     font-weight: 400;
   }
 
   h4 {
     @extend %cj-heading-s;
-    @include cj-responsive-margin(4, "top");
+    @include cj-responsive-margin(6, "top");
+    @include cj-responsive-margin(6, "bottom");
     font-weight: 400;
     @extend %underline;
   }
+
+  // cases where a h4 (underlined) directly follows a h2
+  h2 + h4 {
+    @include cj-responsive-margin(2, "top");
+  }
+
+  // make text pop with a subtle text-shadow
+  // h1, h2, h3, h4, h5 {
+  //   text-shadow: 2px 4px 4px rgba(100, 99, 99, 0.2)
+  // }
 
   h5 {
     @extend %cj-heading-xs;
