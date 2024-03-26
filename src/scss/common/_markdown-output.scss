@@ -5,17 +5,21 @@
 
   h2 {
     @extend %cj-heading-l;
-    @include cj-responsive-margin(6, "top")
+    @include cj-responsive-margin(6, "top");
+    font-weight: 400;
   }
 
   h3 {
     @extend %cj-heading-m;
-    @include cj-responsive-margin(6, "top")
+    @include cj-responsive-margin(6, "top");
+    font-weight: 400;
   }
 
   h4 {
     @extend %cj-heading-s;
-    @include cj-responsive-margin(4, "top")
+    @include cj-responsive-margin(4, "top");
+    font-weight: 400;
+    @extend %underline;
   }
 
   h5 {

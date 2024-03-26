@@ -2,6 +2,7 @@
 @import "colmjude-frontend/colmjude-frontend";
 
 @import "objects/notes-container";
+@import "helpers/typography";
 @import "common/markdown-output";
 @import "components/all";
 @import "../../templates/components/notes-header/notes-header";
@@ -16,6 +17,7 @@
 
 .note__title {
   margin-bottom: cj-spacing(9);
+  font-weight: 400;
 }
 
 .note__updated-date {
