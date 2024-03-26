@@ -3,7 +3,7 @@ title: "Weeknote #17"
 tags: weeknote, ill, ethiopia, klopp
 author: Colm Britton
 created: 2024/02/28
-updated: 2024/03/21
+updated: 2024/03/25
 ---
 
 *This “weeknote” covers the end of January and February 2024.*
@@ -14,6 +14,8 @@ I was ill again 🤢
 Then my parents came out to see us 🛬
 
 We went to Kenya ❤️
+
+![2 rhinos roaming through Nairobi national park](/static/images/notes/images/travel/rhinos_nairobi_small.jpg)
 
 And I was ill again. For the 5th time in 6 months 😭.
 Things are not going so well 😰

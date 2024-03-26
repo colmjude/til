@@ -3,7 +3,7 @@ title: "Weeknote #18"
 tags: weeknote, work, london, racism, power, bread
 author: Colm Britton
 created: 2024/03/15
-updated: 2024/03/24
+updated: 2024/03/25
 ---
 
 *This “weeknote” covers the first couple of weeks of March 2024.*
@@ -30,7 +30,7 @@ On to what I actually did recently:
 
 It's 5 weeks and counting since I last went to the gym 😬 I have the illnesses as an excuse, but that record needs to change.
 
-This [no-knead bread recipe from the New York Times](https://cooking.nytimes.com/recipes/11376-no-knead-bread) is a winner. I’d highly recommend it (note, it does require a cast iron pot).
+This [no-knead bread recipe from the New York Times](https://cooking.nytimes.com/recipes/11376-no-knead-bread) is a winner. I’d highly recommend it (note, it does require [a cast iron pot](https://amzn.to/3Vx9QwA)).
 
 I think I’ve finally solved our TV streaming woes. It required an Apple TV and a VPN, but so far, so good.
 

@@ -3,7 +3,7 @@ title: "Weeknote #13"
 tags: weeknote, dluhc, data-standards, versioning, chatgpt
 author: Colm Britton
 created: 2023/09/18
-updated: 2023/09/18
+updated: 2024/03/24
 ---
 
 ## What I've done
@@ -24,7 +24,7 @@ We could finally update 3 specifications ([conservation-areas](https://digital-l
 
 The team (Paul S and Adam in particular) have made great progress on the dataset editor tool. It is great to see these sketches of some initial flows becoming real.
 
-![An image showing my desk with a blank sheet of page and various pens I'll need for my sketchnotes laid out around the edges](/static/images/notes/work/dluhc-dataset-editor-initial-flows-cropped.jpg)
+![An image showing my desk with a blank sheet of page and various pens I'll need for my sketchnotes laid out around the edges](/static/images/notes/images/work/dluhc-dataset-editor-initial-flows-cropped.jpg)
 
 The dataset editor is another thing that should make our lives easier - and force a few conversations about how certain things are managed and by whom.
 
