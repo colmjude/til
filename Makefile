@@ -2,6 +2,7 @@
 BRANCH := $(shell git rev-parse --abbrev-ref HEAD)
 
 init: 
+	pip install --upgrade pip
 	python3 -m pip install -r requirements.txt
 	npm install
 
@@ -14,8 +15,8 @@ copy/css:
 
 
 copy/imgs:
-	mkdir -p dist/static/images/notes/
-	cp -r images/* dist/static/images/notes/
+	mkdir -p dist/static/images/notes/images
+	cp -r images/* dist/static/images/notes/images
 
 deploy: render deploy/imgs deploy/stylesheet deploy/notes
 
@@ -23,7 +24,7 @@ deploy/notes:
 	scripts/deploy.sh dist/notes/ .
 
 deploy/imgs:
-	scripts/deploy.sh images/ static/images/notes/
+	scripts/deploy-images.sh images/ static/images/notes
 
 deploy/stylesheet:
 	scripts/deploy.sh dist/static/stylesheets/colmjude-notes.css static/stylesheets
