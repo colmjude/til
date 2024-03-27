@@ -2,6 +2,19 @@
   @include cj-font($size: 20);
 }
 
-.note__tags__label {
-  font-family: $cj-font-family-sans
+.note__tag + .note__tag:before {
+  content: "/ ";
 }
+
+.note__tags__label {
+  display: inline-block;
+  margin: 0 10px 0 0 ;
+  @include cj-font($size: 20);
+  font-family: $cj-font-family-sans;
+  letter-spacing: 1px;
+
+  &:after {
+    content: ": ";
+  }
+}
+

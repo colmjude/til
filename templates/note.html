@@ -32,14 +32,20 @@
     <div class="markdown-output note__content">
         {{ markdown_output }}
     </div>
-    <div class="note__tags">
-        <h5 class="cj-heading-s cj-headding--ib note__tags__label">Tags</h5>
-        {% for tag in frontmatter['tags'] %}
-          <a class="cj-link" href="/notes/tag/{{tag|lower|replace(' ', '-')}}">{{ tag }}</a>{% if not loop.last %} / {% endif %}
-        {% endfor %}
-    </div>
-    <div class="note__meta">
-      <p><a class="cj-link" href="{{ edit_url }}">Edit on GitHub</a></p>
-    </div>
+
+    <section class="note__footer">
+      <div class="note__tags">
+        <h5 class="note__tags__label">Tag(s)</h5>
+        {%- for tag in frontmatter['tags'] %}
+        <span class="note__tag">
+          <a class="cj-link" href="/notes/tag/{{tag|lower|replace(' ', '-')}}">{{ tag }}</a>
+        </span>
+        {% endfor -%}
+      </div>
+      <div class="note__meta">
+        <p><a class="cj-link" href="{{ edit_url }}">Edit on GitHub</a></p>
+      </div>
+    </section>
+
 </article>
 {% endblock -%}
