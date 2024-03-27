@@ -26,8 +26,13 @@
 {%- block content %}
 <article class="cj-content-container">
     <div class="note__head">
-      <span class="note__updated-date"><time datetime="{{ frontmatter['updated_timestamp'] }}">{{ frontmatter['updated_date'] }}</time>{{ ' - ' + frontmatter['status'] if frontmatter['status'] }}</span>
-      <h1 class="cj-heading-xl note__title">{{ frontmatter.title }}</h1>
+      <span class="note__updated-date">
+        <time itemprop="datePublished" datetime="{{ frontmatter['created_timestamp'] }}">{{ frontmatter['created_date'] }}</time>
+        {%- if not frontmatter['created_date'] == frontmatter['updated_date'] %}
+        (Updated <time itemprop="dateModified" datetime="{{ frontmatter['updated_timestamp'] }}">{{ frontmatter['updated_date'] }}</time>){{ ' - ' + frontmatter['status'] if frontmatter['status'] }}
+        {% endif -%}
+      </span>
+      <h1 class="cj-heading-xl note__title" itemprop="headline">{{ frontmatter.title }}</h1> 
     </div>
     <div class="markdown-output note__content">
         {{ markdown_output }}
