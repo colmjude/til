@@ -6,6 +6,10 @@ init:
 	python3 -m pip install -r requirements.txt
 	npm install
 
+update-frontend-package:
+	rm -rf node_modules/colmjude-frontend
+	npm install
+
 update-packages:
 	pip install -r requirements.txt
 	npm update
