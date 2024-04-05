@@ -1,12 +1,12 @@
 .notes-list {
   .notes-list__item {
-    @include cj-responsive-margin(8, "bottom");
+    @include cj-responsive-margin(10, "bottom");
   }
 }
 
 .notes-list__item__title {
   margin-bottom: cj-spacing(1);
-  font-family: $cj-font-family-sans;
+  font-weight: 400;
 }
 
 .notes-list__item__link {

@@ -26,7 +26,7 @@
     {%- for n in notes %}
         <li class="notes-list__item">
             <a class="notes-list__item__link" href="{{ n['url'] }}">
-                <h4 class="cj-heading-m notes-list__item__title">{{ n['frontmatter']['title'] }}</h4>
+                <h4 class="cj-heading-l notes-list__item__title">{{ n['frontmatter']['title'] }}</h4>
             </a>
             <div class="notes-list__item__meta">
                 <span><time datetime="{{ n['frontmatter']['updated_timestamp'] }}">{{ n['frontmatter']['updated_date'] }}</time></span>
