@@ -6,7 +6,7 @@ created: 2024/04/06
 updated: 2024/04/24
 ---
 
-This weeknote covers the last week of March and first of April. The Easter period.
+*This weeknote covers the last week of March and first of April. The Easter period.*
 
 ## Work stuff
 
@@ -30,6 +30,8 @@ So we did a bit of roadmapping. Not roadmapping in the sense of this is what we 
 * then we could do this
 * and maybe this
 
+![The output of our just enough roadmapping session. It has a series of stages or releases from left to right. Each release has a name or high-level objective, a rough definition or done and a summary of the impact. The content gets vaguer the further right we get on the roadmap](/static/images/notes/images/work/considerations-app-roadmap.png)
+
 As you can see, the further along we went, the vaguer it got. That's fine. That's realistic.
 
 We have a general direction of travel, and the first few steps are clear. We have enough to get going.
@@ -48,6 +50,8 @@ We could've stopped there and told people we'd be able to report on that soon, b
 We assume people want to see a timeline/changelog (we'll find out if that is true when we put it in front of people). I remembered seeing a timeline component from Moj Digital. I found it in their [design system](https://design-patterns.service.justice.gov.uk/) and thought it'd work for us. So, I went to [the Github repository for their frontend stuff](https://github.com/ministryofjustice/moj-frontend). Luckily, it was easy enough to understand, and I found the component.
 A quick copy and paste later, and I had the scss I needed to replicate the timeline. Then, I needed the markup. I returned to the Moj design system, found [the timeline component](https://design-patterns.service.justice.gov.uk/components/timeline/), checked the example for the HTML and copied that too.
 Squeezing the changelog data into the template took a few minutes and, boom, I was done.
+
+![An image showing the timeline component recording when a planning consideration went through each stage](/static/images/notes/images/work/stage-changelog-timeline.png)
 
 This is what I love about the x-gov design community. All this openly available stuff helps speed up your work. Big respect for everyone who shares stuff ❤️
 
