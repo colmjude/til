@@ -11,7 +11,7 @@ I managed to get a datasette instance running on Render.com.
 
 You need a python project that installs the `datasette` package. And you need the repo to include the sqlite db (e.g. `name.db`).
 
-Then create a python **Web Service** on [Render.com](render.com).
+Then create a python **Web Service** on [Render.com](https://render.com/).
 
 Set the start command to use datasette. I used
 
