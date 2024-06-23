@@ -3,10 +3,12 @@ title: Change an old commit
 tags: webdev, git, commandline, development
 author: Colm Britton
 created: 2023/01/23
-updated: 2023/01/23
+updated: 2024/06/23
 ---
 
-Sometimes you might need to change an old commit. For example, I recently noticed I'd included an api in a commit. I don;t want people seeing that so deleting it in a new commit isn't enough. It would still be in the commit hostory if I did that so I needed a way to remove as if it had never been there.
+There are times when you work with git when you might need to change an old commit. For example, I recently noticed I'd included an API key in a commit. Oops, not ideal. And not something you can just fix with a new commit. With a new commit the API key will still be available in the commit history.
+
+You need to remove all trace of it. You do that by changing the particular commit.
 
 I've written [a note about amending the last commit](/notes/development/git-revert-last-commit/). These steps are for changing a commit that is older than that.
 
