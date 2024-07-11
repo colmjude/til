@@ -3,7 +3,7 @@ title: VSCode for designers
 tags: webdev, design, vscode, css
 author: Colm Britton
 created: 2024/07/03
-updated: 2024/07/03
+updated: 2024/07/11
 ---
 
 As a designer I often jump into vscode to work on designs, components and pages.
@@ -24,4 +24,12 @@ For example, add the following to `settings.json`
   "css.styleSheets": ["docs/static/**/*.css"],
   "css.autoValidation": "Save",
 }
-``
+```
+
+You regularly get false warnings which is annoying.
+
+To correct, hit `shft` + `cmd` + `p` to bring up command panel. Search or select `CSS: Clear style sheet cache`.
+
+### Edit HTML tags as one
+
+I've installed [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag) to make it easier to change html tags. You'll no longer need to change both the opening and closing tags separately. This extension does it for you.
