@@ -4,13 +4,13 @@ import datetime
 import os
 import sys
 
-frontmatter_str = """title: "<<title>>"
+frontmatter_str = """---
+title: "<<title>>"
 tags:
 author: Colm Britton
 created: <<date>>
 updated: <<date>>
-draft: True
---------------------
+---
 """
 
 
@@ -38,6 +38,7 @@ def save_markdown_file(path, content):
     til_file.close()
 
 
+# should replace this with create_note function
 def create_file(args):
     til_dir = base_dir
 
@@ -52,6 +53,23 @@ def create_file(args):
         print(f"ERROR: {til_path} already exists")
     else:
         content = prepare_template(args[0])
+        save_markdown_file(til_path, content)
+
+
+def create_note(name, folder=None, til_dir="docs/"):
+    til_dir = base_dir
+
+    if folder:
+        til_dir = os.path.join(til_dir, folder)
+
+    if not os.path.isdir(til_dir):
+        os.mkdir(til_dir)
+
+    til_path = os.path.join(til_dir, f"{title_to_filename(name)}.md")
+    if os.path.isfile(til_path):
+        print(f"ERROR: {til_path} already exists")
+    else:
+        content = prepare_template(name)
         save_markdown_file(til_path, content)
 
 
