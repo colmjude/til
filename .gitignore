@@ -145,5 +145,6 @@ cython_debug/
 local.mk
 __pycache__
 DEPLOY_NOTES.md
+LOCAL_NOTES.md
 
 node_modules
