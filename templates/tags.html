@@ -12,7 +12,7 @@
     <ol>
     {%- for tag in tags.keys() %}
         <li class="notes-list__item">
-            <a href="/notes/tag/{{ tag|lower|replace(' ', '-') }}">
+            <a href="{{tag|tag_url}}">
                 {{ tag }} - {{ tags[tag]['notes']|length }}
             </a>
         </li>

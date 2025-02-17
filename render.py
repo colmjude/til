@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 import os
-
+import re
 import jinja2
 import markdown
 from markdown.extensions.wikilinks import WikiLinkExtension
@@ -113,15 +113,36 @@ for n in notes_list:
         tags.setdefault(tag, {"notes": []})
         tags[tag]["notes"].append(n)
 
+
+def extract_weeknote_number(title):
+    match = re.search(r"\d+", title)
+    return int(match.group()) if match else 0
+
+
 for tag in tags.keys():
-    render(
-        config.DIST_ROOT + "tag/" + slugify(tag) + "/index.html",
-        list_template,
-        notes=tags[tag]["notes"],
-        list_title=f"Tag: {tag}",
-        notes_page_classes="notes-tag-page",
-        tag=tag,
-    )
+    if tag == "weeknote":
+        weeknotes = sorted(
+            tags[tag]["notes"],
+            key=lambda n: extract_weeknote_number(n["frontmatter"]["title"]),
+            reverse=True,
+        )
+        render(
+            config.DIST_ROOT + "weeknote/index.html",
+            list_template,
+            notes=weeknotes,
+            list_title="Weeknotes",
+            notes_page_classes="notes-weeknote-page",
+            tag=tag,
+        )
+    else:
+        render(
+            config.DIST_ROOT + "tag/" + slugify(tag) + "/index.html",
+            list_template,
+            notes=tags[tag]["notes"],
+            list_title=f"Tag: {tag}",
+            notes_page_classes="notes-tag-page",
+            tag=tag,
+        )
 
 # render list of tags page
 sorted_tags = dict(sorted(tags.items(), key=lambda item: item[0]))

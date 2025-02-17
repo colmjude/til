@@ -43,7 +43,7 @@
         <h5 class="note__tags__label">Tag(s)</h5>
         {%- for tag in frontmatter['tags'] %}
         <span class="note__tag">
-          <a class="cj-link" href="/notes/tag/{{tag|lower|replace(' ', '-')}}">{{ tag }}</a>
+          <a class="cj-link" href="{{tag|tag_url}}">{{ tag }}</a>
         </span>
         {% endfor -%}
       </div>
