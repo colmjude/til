@@ -12,7 +12,7 @@ _This note covers 20 April 2024 - 05 May 2024_
 
 The big talking point this week: a potential team rename. Moving from **Data Standards** to **Data Design**. A data standard is just one possible output from our work, whereas data design better reflects what the breadth of what the team actually does.
 
-### Policy vs digital**
+### Policy vs digital
 
 Policy can often, intentional, be open to interpretation, where as digital expects clear rules and logic. There is a tension there that we are trying to bridge. Its a constant challenge and this week was no exception.
 
