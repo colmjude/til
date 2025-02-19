@@ -121,9 +121,10 @@ class Note:
     # converts ['frontend, js']
     # to ['frontend', 'js']
     def extract_tags(self):
-        return [
-            t.strip(" ").lower() for t in self.frontmatter.get("tags", []).split(",")
-        ]
+        tags = self.frontmatter.get("tags", "")
+        if tags:
+            return [t.strip(" ").lower() for t in tags.split(",")]
+        return []
 
     def get_frontmatter(self):
         # make a copy
