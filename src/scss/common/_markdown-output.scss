@@ -49,6 +49,8 @@
 
     @include mq($from: tablet) {
       font-size: 16px !important;
+      // should really make this change in cj-frontend
+      width: 100% + ($cj-full-width-increase * 2);
     }
   }
 
@@ -70,6 +72,8 @@
   li {
     code {
       @extend %cj-code;
+      // should I make this change in cj-frontend?
+      font-size: .75em;
     }
   }
 

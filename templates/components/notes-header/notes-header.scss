@@ -1,4 +1,5 @@
 $cj-orange-colour: #e9a23f;
+$cj-orange-colour-text: #C27201;
 $cj-font-family-sans: "Open Sans", sans-serif;
 $notes-header-height: 50px;
 
@@ -92,5 +93,25 @@ $notes-header-height: 50px;
     display: inline-block;
     @include cj-font($size: 20, $font-family: $cj-font-family-sans);
     margin-top: 5px;
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////////
+/// Variations
+/// ////////////////////////////////////////////////////////////////////////////
+
+.note-page {
+  .notes-header__title__back-link {
+    color: $cj-orange-colour-text;
+    font-style: italic;
+    text-transform: lowercase;
+  }
+
+  .notes-header__section {
+    &:before {
+      @include mq($from: tablet) {
+        bottom: -35px;
+      }
+    }
   }
 }
