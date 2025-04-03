@@ -50,7 +50,15 @@
     @include mq($from: tablet) {
       font-size: 16px !important;
       // should really make this change in cj-frontend
+      width: 100% + $cj-full-width-increase;
+      transform: translateX(clamp(0%, -5vw, -10%));
+    }
+
+    @include mq($from: desktop) {
+      // should really make this change in cj-frontend
+      //margin-left: clamp(-20%, -5vw, 0);
       width: 100% + ($cj-full-width-increase * 2);
+      transform: translateX(clamp(0%, -5vw, -20%));
     }
   }
 
