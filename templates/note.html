@@ -4,6 +4,13 @@
 {% set noteTitle = frontmatter.title %}
 {% set noteDescription = frontmatter.description if frontmatter.description else 'A note about something or other.' %}
 
+{%- block metaBlock -%}
+  <!-- When the content was originally published -->
+  <meta name="date" content="{{ frontmatter['created_timestamp']|timestamp_to_date }}" scheme="YYYY-MM-DD" />
+  <!-- When the content was last modified -->
+  <meta name="last-modified" content="{{ frontmatter['updated_timestamp']|timestamp_to_date }}" scheme="YYYY-MM-DD" />
+{%- endblock metaBlock -%}
+
 {% block canonicalTag -%}
 <link rel="canonical" href="{{ canonical_url }}" />
 {%- endblock canonicalTag %}

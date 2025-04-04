@@ -1,7 +1,7 @@
 import jinja2
 from config import Config
 
-from application.jinja_filters import generate_tag_url
+from application.jinja_filters import generate_tag_url, format_timestamp_to_date
 
 
 config = Config()
@@ -27,6 +27,7 @@ def register_globals(env):
 
 def register_filters(env):
     env.filters["tag_url"] = generate_tag_url
+    env.filters["timestamp_to_date"] = format_timestamp_to_date
 
 
 def setup_jinja():
