@@ -1,5 +1,5 @@
 ---
-title: "weeknote #33"
+title: "Weeknote #33"
 tags: work, weeknote, planning applications, data specs, information models, data design, ai
 author: Colm Britton
 created: 2025/02/14
