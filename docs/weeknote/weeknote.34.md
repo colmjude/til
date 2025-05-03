@@ -36,7 +36,7 @@ The aim is to identify the common modules, structures, and fields while keeping 
 
 ### Non-work – life
 
-- Found this [stuffed flatbread recipe](https://www.drveganblog.com/cheese-and-potato-stuffed-flatbread/). Ticks the Addis-friendly, kid-friendly, and tasty boxes 😋.
+- Found this [stuffed flatbread recipe](https://www.drveganblog.com/cheese-and-potato-stuffed-flatbread/). Ticks the Addis-friendly, kid-friendly and tasty boxes 😋.
 - Got to witness a VVIP visit and the scale of what goes into organising one. Quite the operation.
 - Errr, is this [a good move?](https://www.theguardian.com/technology/2025/feb/21/apple-removes-advanced-data-protection-tool-uk-government) Apple’s removed an advanced data protection tool in the UK. Not blaming Apple, btw.
 - An article straight from the Mike Rose school of interesting: [a German judge ruled Birkenstocks aren’t works of art](https://www.theguardian.com/world/2025/feb/20/birkenstocks-are-not-works-of-art-top-german-court-rules-in-copyright-case).
