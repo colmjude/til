@@ -138,7 +138,11 @@ for tag in tags.keys():
         render(
             config.DIST_ROOT + "tag/" + slugify(tag) + "/index.html",
             list_template,
-            notes=tags[tag]["notes"],
+            notes=sorted(
+                tags[tag]["notes"],
+                key=lambda n: n["frontmatter"]["updated_timestamp"],
+                reverse=True,
+            ),
             list_title=f"Tag: {tag}",
             notes_page_classes="notes-tag-page",
             tag=tag,
