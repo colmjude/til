@@ -176,5 +176,7 @@ class Note:
         return {
             "content": self.markdown_content,
             **self.get_frontmatter(),
+            "section": self.parent_category,
+            "slug": self.slug,
             "url": self.get_url(),
         }

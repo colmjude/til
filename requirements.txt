@@ -10,6 +10,7 @@ Markdown==3.2.1
 markdowntweetembed
 MarkupSafe==1.1.1
 paramiko
+pydantic
 python-dotenv==0.13.0
 python-frontmatter
 PyYAML

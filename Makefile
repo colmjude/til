@@ -82,7 +82,7 @@ watch:
 -include local.mk
 
 remove-db:
-	rm dumps/notes.db
+	rm -f dumps/notes.db
 
 sqlite-db: remove-db
 	python dump.py
