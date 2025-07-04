@@ -38,7 +38,7 @@ Here’s what I said in the moment:
 > 
 > They link together with shared references. That way, we keep each dataset clean and focused, but still able to give the full picture.”
 
-![Diagram showing a good (left) and bad (right) way to structure Article 4 Direction data. The good example links one direction to multiple areas using IDs, avoiding repetition. The bad example repeats the direction info for each area, causing duplication.](/static/images/notes/work/explainer-relational-data.png)
+![Diagram showing a good (left) and bad (right) way to structure Article 4 Direction data. The good example links one direction to multiple areas using IDs, avoiding repetition. The bad example repeats the direction info for each area, causing duplication.](/static/images/notes/images/work/explainer-relational-data.png)
 
 ### Submission specifications are a different kind of challenge
 

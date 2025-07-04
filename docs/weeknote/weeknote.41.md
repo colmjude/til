@@ -67,11 +67,11 @@ At a high (and grossly simplified) level, the planning system is what sits betwe
 
 And for many people, that system feels like a black box.
 
-![top-level@2x.png](/static/images/notes/work/top-level@2x.png)
+![top-level@2x.png](/static/images/notes/images/work/top-level@2x.png)
 
 We can unpack that further by showing how a user (usually the applicant) puts information into the system, and what they get back. Again, this is deliberately simple. That’s the point.
 
-![planning-permission-in-out@2x.png](/static/images/notes/work/planning-permission-in-out@2x.png)
+![planning-permission-in-out@2x.png](/static/images/notes/images/work/planning-permission-in-out@2x.png)
 
 There are three key stages here:
 
@@ -110,13 +110,13 @@ I think of it like this:
 
 That’s what the planning application data specifications are trying to achieve.
 
-![submissions-specs@2x.png](/static/images/notes/work/submissions-specs@2x.png)
+![submissions-specs@2x.png](/static/images/notes/images/work/submissions-specs@2x.png)
 
 But to make the system really flow, we need to improve both **what goes in** and **what comes out**.
 
 That’s why we’re now picking up the **planning applications and decisions specifications**.
 
-![submissions-and-decision-specs@2x.png](/static/images/notes/work/submissions-and-decision-specs@2x.png)
+![submissions-and-decision-specs@2x.png](/static/images/notes/images/work/submissions-and-decision-specs@2x.png)
 
 IIf we can raise the quality of inputs and outputs, and make sure those two parts align, we create the conditions for a clean, consistent, end-to-end data flow.
 
