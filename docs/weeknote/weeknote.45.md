@@ -76,7 +76,7 @@ This should also indicate that not every field in the submission specifications 
 ### Other work bits
 
 - We updated the [specifications page](https://design.planning.data.gov.uk/specifications) to make the language clearer so it’s easier to understand what we mean by working draft, pilot, and candidate status.
-- That “timeline” I mentioned a few weeks back? It’s now called a **Roadmap** (for the planning applications work). Much better name. 
+- That “timeline” I mentioned a few weeks back? It’s now called a [Roadmap](https://design.planning.data.gov.uk/project/planning-applications/roadmap) (for the planning applications work). Much better name. 
 
 ---
 
