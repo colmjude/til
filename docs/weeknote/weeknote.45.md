@@ -15,6 +15,7 @@ Progress has also continued on converting the “human readable” specification
 There’s a [changelog](https://github.com/digital-land/planning-application-data-specification/blob/main/CHANGELOG.md) now (which I talked about last [weeknote](/notes/weeknote/weeknote-44)). If you’re curious, it’s the easiest way to see what’s changed and what’s being worked on.
 
 Some highlights I’m particularly happy about:
+
 - ✅ Made the `contact-details` module consistent across all application types ([#294](https://github.com/digital-land/planning-application-data-specification/issues/294))
 - 🏘️ Shared a proposal for a reworked `residential-units` module—with example data ([#284](https://github.com/digital-land/planning-application-data-specification/issues/284#issuecomment-3004494887))
 - ✂️ Removed an unused module from the ‘consent under TPO’ application. Less to fill in = better for users.
@@ -53,12 +54,14 @@ That means we’ve had to make different design choices.
 Take flag fields, for example. Normally, we avoid them. If you already have the data, you can infer the flag. But that logic doesn’t work when you’re asking the applicant to provide the info in the first place. For example, take the question about "Has the development already started?"
 
 Normally:
+
 * in the specification - `development-start-date`
 * inferrable 
 	* development has not started if `development-start-date` is empty
 	* development has started if date in `development-start-date`
 
 In submission specification(s):
+
 * `has-development-started` field
 * if "yes" provided, tell us when (`development-start-date` field)
 

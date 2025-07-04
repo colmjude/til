@@ -3,7 +3,7 @@ title: "Weeknote #41"
 tags: weeknote, planning applications, planning requirements, visuals
 author: Colm Britton
 created: 2025/05/12
-updated: 2025/06/01
+updated: 2025/05/30
 ---
 
 *Weeknote covering 1-12 May*

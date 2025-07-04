@@ -85,8 +85,10 @@ It’s a different approach, but a necessary one. Lots of people want access to 
 
 ### Other updates
 
-	•	more [planning condition data is now on the platform](https://www.planning.data.gov.uk/dataset/planning-condition), thanks to another batch from Doncaster
-	•	I tweaked the [listed building dataset specification](https://digital-land.github.io/specification/specification/listed-building/) after we reviewed HMLR’s local land charge data. We’ve added `uprns` to capture all properties affected, and reintroduced a `description` field. I this case, essential for explaining whether the dataset refers to curtilage, property boundary, or something else.
+Include:
+
+•	more [planning condition data is now on the platform](https://www.planning.data.gov.uk/dataset/planning-condition), thanks to another batch from Doncaster
+•	I tweaked the [listed building dataset specification](https://digital-land.github.io/specification/specification/listed-building/) after we reviewed HMLR’s local land charge data. We’ve added `uprns` to capture all properties affected, and reintroduced a `description` field. I this case, essential for explaining whether the dataset refers to curtilage, property boundary, or something else.
 
 ---
 

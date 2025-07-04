@@ -3,7 +3,7 @@ title: "Weeknote #42"
 tags: weeknote, data design, planning applications, feedback
 author: Colm Britton
 created: 2025/05/20
-updated: 2025/06/01
+updated: 2025/06/02
 ---
 
 *Covering 12th - 23rd May*

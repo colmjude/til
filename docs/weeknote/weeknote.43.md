@@ -13,6 +13,7 @@ The last two weeks have been a bit of a blur with some real progress made, but p
 ### Declarative modelling
 
 In my last [weeknote](/notes/weeknote/weeknote-42/), I mentioned starting to write up what a declarative model might look like for the planning applications work. This fortnight, I fleshed it out and published a first cut of that thinking:
+
 	•	[What is a declarative model?](https://github.com/digital-land/planning-application-data-specification/blob/main/docs/declarative-model.md)
 	•	[Module interface](https://github.com/digital-land/planning-application-data-specification/blob/main/docs/module.md)
 	•	[Field interface](https://github.com/digital-land/planning-application-data-specification/blob/main/docs/fields.md)
@@ -27,6 +28,7 @@ I published the [draft timeline](https://design.planning.data.gov.uk/advisory-gr
 That sparked a wider conversation about the purpose and structure of those pages. Originally, they were just for updates and useful links. But the work has outgrown that. The page now acts more like a central hub for everything planning-application-related.
 
 We’re starting to explore how to redesign this content around clearer units of work. That likely means structuring things around:
+
 	•	projects (like the planning application spec work)
 	•	considerations (like design codes, or validation rules)
 	•	datasets (like conditions or site allocations)
@@ -36,6 +38,7 @@ This would also give us room to support other streams properly. For example, loc
 On the call for feedback: we received it across email threads, shared docs, and GitHub comments. Kieran kindly [collated it all into one place](https://docs.google.com/spreadsheets/d/10QprqRCo8Ss_Hpx-XkXpVHmVGewiTzWbVITEz9vXvhw/edit?usp=sharing), and I spent a fair chunk of time reviewing and responding.
 
 So far, that’s meant:
+
 	•	63 items resolved
 	•	[93 new GitHub issues raised](https://github.com/digital-land/planning-application-data-specification/issues)
 
@@ -44,12 +47,14 @@ So far, that’s meant:
 Dates continue to be tricky. I posted [a write-up of the recent “effective-date” discussion](https://github.com/digital-land/data-standards-backlog/discussions/149#discussioncomment-13351739) I had with Camden.
 
 That example made a strong case for needing a fourth kind of date. To represent the policy lifecycle, we seem to need:
+
 	•	`entry-date` - when the data was created
 	•	`start-date` - when the policy starts to carry weight (even in draft)
 	•	`end-date` - when it’s no longer in force
 	•	`effective-date` - when it officially comes into effect (e.g. adoption)
 
 This is just one example but there is a broader question to answer (or at least its bothering me) about understanding the different roles dates play. Broadly, I've seen
+
 	•	system dates - used internally to track versions
 	•	significant dates – affect the meaning or legal status of the thing
 	•	process dates – document how something came to be (like a log or audit trail)
