@@ -6,7 +6,7 @@
 * make static dir configurable ?
 * make tags on note page links
 * style a blockquote (Weeknote 27th July)
-* only deploy new or changed notes
+* checks for image urls in notes
 
 
 ### Ideas
@@ -33,3 +33,4 @@
 * Wikilinks need to do more than top level links
 * move position of updated date
 * make tags links (need list pages for all available tags)
+* only deploy new or changed notes (THIS IS GETTING TO BE ESSENTIAL)

@@ -25,19 +25,19 @@ copy/imgs:
 deploy: render deploy/imgs deploy/stylesheet deploy/notes
 
 deploy/notes:
-	scripts/deploy.sh dist/notes/ .
+	python3 bin/incremental_deploy.py dist/notes/ .
 
 deploy/imgs:
-	scripts/deploy-images.sh images/ static/images/notes
+	python3 bin/incremental_deploy.py images/ static/images/notes
 
 deploy/stylesheet:
-	scripts/deploy.sh dist/static/stylesheets/colmjude-notes.css static/stylesheets
+	python3 bin/incremental_deploy.py dist/static/stylesheets/colmjude-notes.css static/stylesheets
 
 deploy/javascripts:
-	scripts/deploy.sh dist/static/javascripts/notes-search.js static/javascripts
+	python3 bin/incremental_deploy.py dist/static/javascripts/notes-search.js static/javascripts
 
 deploy/resources:
-	scripts/deploy.sh static/resources/ static/resources/
+	python3 bin/incremental_deploy.py static/resources/ static/resources/
 
 render:
 	python3 render.py

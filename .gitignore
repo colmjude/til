@@ -148,3 +148,6 @@ DEPLOY_NOTES.md
 LOCAL_NOTES.md
 
 node_modules
+
+# stores what has been deployed
+.deploy_manifest.json
