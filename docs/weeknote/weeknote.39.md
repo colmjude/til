@@ -1,6 +1,6 @@
 ---
 title: "Weeknote #39"
-tags: kenya, holiday, coast
+tags: weeknote, kenya, holiday, coast
 author: Colm Britton
 created: 2025/05/03
 updated: 2025/05/03
