@@ -11,7 +11,6 @@
 
 ### Ideas
 
-* deploy script
 * render list pages?
 * datasette search? (via a datasette instance https://twitter.com/simonw/status/1252051240583696385) | Example https://github.com/simonw/til/blob/master/python/generate-nested-json-summary.md
 
