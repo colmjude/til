@@ -1,6 +1,8 @@
 # current git branch
 BRANCH := $(shell git rev-parse --abbrev-ref HEAD)
 
+.PHONY: reset-deploy-manifest
+
 init: 
 	pip install --upgrade pip
 	python3 -m pip install -r requirements.txt
@@ -38,6 +40,9 @@ deploy/javascripts:
 
 deploy/resources:
 	python3 bin/incremental_deploy.py static/resources/ static/resources/
+
+reset-deploy-manifest:
+	python3 bin/reset_deploy_manifest.py $(PAGES)
 
 render:
 	python3 render.py

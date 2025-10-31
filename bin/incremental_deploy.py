@@ -24,6 +24,7 @@ from dotenv import load_dotenv
 
 EXCLUDED_FILENAMES = {".DS_Store", "Thumbs.db"}
 MANIFEST_FILENAME = ".deploy_manifest.json"
+REMOTE_NOTES_DIR_ENV = "REMOTE_NOTES_DIR"
 
 
 def sha256_digest(path: Path) -> str:
@@ -276,9 +277,16 @@ def main() -> None:
     webhost = os.environ.get("WEBHOST")
     port = int(os.environ.get("WEBPORT", "22"))
     remote_root = os.environ.get("PATHTODIR")
+    # REMOTE_NOTES_DIR allows targeting a subdirectory (e.g. "notes") beneath PATHTODIR.
+    remote_notes_dir = os.environ.get(REMOTE_NOTES_DIR_ENV, "").strip()
 
     if not webhost or not remote_root:
         raise SystemExit("WEBHOST and PATHTODIR must be set in the environment or .env")
+
+    if remote_notes_dir:
+        remote_notes_dir = normalise_destination(remote_notes_dir)
+        if remote_notes_dir:
+            remote_root = posixpath.join(remote_root.rstrip("/"), remote_notes_dir)
 
     username, hostname = parse_webhost(webhost)
 

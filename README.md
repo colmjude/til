@@ -46,3 +46,19 @@ WEBHOST=<webhost>
 WEBPORT=<webport>
 PATHTODIR=<path to public_html dir>
 ```
+
+### Force a fresh upload of selected pages
+
+The incremental deploy keeps a manifest of files that have already been uploaded. To force a fresh upload of frequently changing pages, run:
+
+```
+make reset-deploy-manifest
+```
+
+That command clears a preset list of paths defined in `bin/reset_deploy_manifest.py` (currently `index.html` and `weeknote/index.html`). To override the preset, supply your own space-separated list:
+
+```
+make reset-deploy-manifest PAGES="index.html tags/design/index.html"
+```
+
+On the next deploy, any cleared paths are pushed again even if their hashes have not changed.
