@@ -6,7 +6,7 @@ flake8
 Jinja2
 -e git+https://github.com/colmjude/colmjude-frontend.git#egg=colmjude-frontend
 isort
-Markdown==3.2.1
+Markdown==3.8.1
 markdowntweetembed
 MarkupSafe==1.1.1
 paramiko
