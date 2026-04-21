@@ -11,7 +11,7 @@ markdowntweetembed
 MarkupSafe==1.1.1
 paramiko
 pydantic
-python-dotenv==0.13.0
+python-dotenv==1.2.2
 python-frontmatter
 PyYAML
 regex==2020.4.4
